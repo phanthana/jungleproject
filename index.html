@@ -94,9 +94,18 @@
     white-space: nowrap;
   }
   .wordmark img {
-    height: 58px;
+    height: 72px;
     width: auto;
+    max-width: 220px;
+    object-fit: contain;
     display: block;
+  }
+
+  @media (max-width: 719px) {
+    .wordmark img {
+      height: 56px;
+      max-width: 175px;
+    }
   }
   nav.links {
     display: flex;
