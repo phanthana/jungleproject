@@ -1958,7 +1958,130 @@ nav.links a::after {
     color: #ffffff !important;
   }
 
-}  
+} 
+    /* ===== FINAL MOBILE CLEAN LAYOUT ===== */
+
+@media (max-width: 768px) {
+
+  /* Smaller logo */
+  .wordmark img {
+    height: 118px !important;
+    max-width: 285px !important;
+  }
+
+  /* Navigation row */
+  nav.links {
+    margin-top: 2px !important;
+    width: 100% !important;
+  }
+
+  nav.links a {
+    min-height: 82px !important;
+    padding: 0 1px 3px !important;
+  }
+
+  /* Smaller green icon circles */
+  .nav-icon {
+    width: 36px !important;
+    height: 36px !important;
+    margin: 0 auto 4px !important;
+    border-width: 2px !important;
+  }
+
+  .nav-icon i {
+    font-size: 17px !important;
+  }
+
+  nav.links a:nth-child(4) .nav-icon i {
+    font-size: 16px !important;
+  }
+
+  nav.links a:nth-child(5) .nav-icon i {
+    font-size: 18px !important;
+  }
+
+  /* Navigation titles */
+  .nav-title {
+    font-size: 10px !important;
+    line-height: 1.12 !important;
+  }
+
+  /* Navigation subtitles */
+  .nav-sub {
+    margin-top: 3px !important;
+    font-size: 7px !important;
+    line-height: 1.15 !important;
+  }
+
+  /* Small arrow circles */
+  .nav-arrow {
+    width: 24px !important;
+    height: 24px !important;
+    margin: 4px auto 0 !important;
+    border-width: 1.5px !important;
+  }
+
+  .nav-arrow i {
+    font-size: 10px !important;
+  }
+
+  /* Move hero content upward */
+  .hero-inner {
+    padding: 405px 14px 28px !important;
+  }
+
+  /* Event information bar */
+  .facts-row {
+    width: 100% !important;
+    max-width: 350px !important;
+    min-height: 0 !important;
+    margin: 0 auto 16px !important;
+    padding: 9px 10px !important;
+    border-width: 2px !important;
+  }
+
+  .facts-row::before {
+    font-size: 9px !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Music / People / Nature */
+  h1.hero-title::before {
+    font-size: 10px !important;
+    margin-bottom: 4px !important;
+    letter-spacing: 0.10em !important;
+  }
+
+  /* All Together */
+  h1.hero-title::after {
+    font-size: clamp(48px, 14vw, 64px) !important;
+    line-height: 0.95 !important;
+  }
+
+  /* Description */
+  .hero-sub {
+    max-width: 330px !important;
+    margin: 14px auto 16px !important;
+  }
+
+  .hero-sub::before {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* WhatsApp button */
+  .hero-cta-row .btn {
+    width: 88% !important;
+    min-height: 58px !important;
+    font-size: 17px !important;
+  }
+
+  /* Hide scroll indicator here - it was causing overlap */
+  .scroll-indicator {
+    display: none !important;
+  }
+
+}
 </style>
 </head>
 <body>
