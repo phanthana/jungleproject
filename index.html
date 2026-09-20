@@ -2082,46 +2082,44 @@ nav.links a::after {
   }
 
 }
-/* FINAL WHATSAPP BUTTON - NO OVERLAP */
+/* FINAL WHATSAPP BUTTON - CLEAN */
 
 @media (max-width: 768px) {
 
   .hero-cta-row .btn {
-    display: grid !important;
-    grid-template-columns: 42px 1fr 28px !important;
+    display: flex !important;
     align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
     width: 88% !important;
     min-height: 58px !important;
-    padding: 0 18px !important;
+    padding: 0 20px !important;
     box-sizing: border-box !important;
     overflow: hidden !important;
   }
 
   .hero-cta-row .btn .fa-whatsapp {
+    display: inline-block !important;
     position: static !important;
     transform: none !important;
     margin: 0 !important;
-    font-size: 27px !important;
+    font-size: 28px !important;
     line-height: 1 !important;
-    justify-self: start !important;
+    flex: 0 0 auto !important;
   }
 
   .hero-cta-row .btn span {
-    display: block !important;
-    width: 100% !important;
+    display: inline-block !important;
+    width: auto !important;
     text-align: center !important;
     white-space: nowrap !important;
     font-size: 17px !important;
     line-height: 1.2 !important;
+    flex: 0 0 auto !important;
   }
 
   .hero-cta-row .btn .fa-chevron-right {
-    position: static !important;
-    transform: none !important;
-    margin: 0 !important;
-    font-size: 17px !important;
-    line-height: 1 !important;
-    justify-self: end !important;
+    display: none !important;
   }
 
 }
