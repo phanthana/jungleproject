@@ -979,6 +979,181 @@ nav.links a {
     overflow: visible !important;
   }
 }
+  /* ===== FINAL JUNGLE PROJECT MOBILE HOMEPAGE ===== */
+@media (max-width: 768px) {
+
+  /* Put header over the hero image */
+  header {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    padding: 18px 0 0 !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+  }
+
+  /* Center the logo */
+  .nav-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 0 10px !important;
+    gap: 6px !important;
+  }
+
+  .wordmark {
+    order: 1 !important;
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .wordmark img {
+    height: 145px !important;
+    width: auto !important;
+    max-width: 330px !important;
+    object-fit: contain !important;
+  }
+
+  /* Hide the separate Message Us button */
+  .nav-cta {
+    display: none !important;
+  }
+
+  /* Five navigation buttons */
+  nav.links {
+    order: 2 !important;
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    width: 100% !important;
+    gap: 0 !important;
+    padding: 8px 0 12px !important;
+    margin: 4px 0 0 !important;
+    border-top: 1px solid rgba(255,255,255,0.18);
+    border-bottom: 1px solid rgba(255,255,255,0.18);
+  }
+
+  nav.links a {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: center !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 4px 2px !important;
+    font-size: 10px !important;
+    line-height: 1.15 !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    white-space: normal !important;
+    border-left: 1px solid rgba(255,255,255,0.12);
+  }
+
+  nav.links a:first-child {
+    border-left: none;
+  }
+
+  /* Lime icons */
+  nav.links a::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    margin-bottom: 5px;
+    border: 2px solid #d8ff3e;
+    border-radius: 50%;
+    color: #d8ff3e;
+    font-size: 16px;
+    font-weight: 900;
+  }
+
+  nav.links a:nth-child(1)::before {
+    content: "✦";
+  }
+
+  nav.links a:nth-child(2)::before {
+    content: "i";
+  }
+
+  nav.links a:nth-child(3)::before {
+    content: "▣";
+  }
+
+  nav.links a:nth-child(4)::before {
+    content: "▶";
+    font-size: 13px;
+  }
+
+  nav.links a:nth-child(5)::before {
+    content: "⌖";
+  }
+
+  /* Small arrow under each navigation item */
+  nav.links a::after {
+    content: "›";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    border: 1px solid rgba(255,255,255,0.45);
+    border-radius: 50%;
+    font-size: 14px;
+    color: #ffffff;
+  }
+
+  /* Make hero fill the whole phone screen */
+  .hero {
+    min-height: 100svh !important;
+    height: 100svh !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    overflow: hidden !important;
+  }
+
+  .hero-bg {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-position: center center !important;
+  }
+
+  /* Move hero content below the logo/navigation */
+  .hero-inner {
+    position: relative !important;
+    z-index: 5 !important;
+    width: 100% !important;
+    padding: 0 18px 35px !important;
+    margin: 0 !important;
+  }
+
+  /* Keep the current hero text for now, but make it smaller */
+  h1.hero-title {
+    font-size: clamp(40px, 12vw, 58px) !important;
+    line-height: 0.95 !important;
+    max-width: 11ch !important;
+    margin-top: 18px !important;
+  }
+
+  .hero-sub {
+    font-size: 15px !important;
+    line-height: 1.45 !important;
+  }
+
+  .facts-row {
+    margin-top: 20px !important;
+  }
+
+}
 </style>
 </head>
 <body>
