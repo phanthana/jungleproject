@@ -2082,6 +2082,41 @@ nav.links a::after {
   }
 
 }
+/* FINAL WHATSAPP BUTTON FIX */
+
+@media (max-width: 768px) {
+
+  .hero-cta-row .btn {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 14px !important;
+    overflow: hidden !important;
+    padding: 0 24px !important;
+  }
+
+  .hero-cta-row .btn .fa-whatsapp {
+    position: static !important;
+    margin: 0 !important;
+    transform: none !important;
+    font-size: 27px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .hero-cta-row .btn span {
+    flex: 0 1 auto !important;
+    white-space: nowrap !important;
+  }
+
+  .hero-cta-row .btn .fa-chevron-right {
+    position: static !important;
+    margin-left: 4px !important;
+    font-size: 16px !important;
+    flex-shrink: 0 !important;
+  }
+
+}    
 </style>
 </head>
 <body>
