@@ -9,7 +9,8 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  style>
   :root {
     --bg: #0a130f;
     --bg-alt: #101f19;
@@ -1748,6 +1749,216 @@ nav.links a::after {
   }
 
 }
+/* =========================================================
+   FINAL JUNGLE PROJECT NAVIGATION
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  nav.links {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    width: 100% !important;
+    gap: 0 !important;
+    margin: 8px 0 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  nav.links a {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 105px !important;
+    padding: 0 2px 4px !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    text-align: center !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    border-right: 1px solid rgba(198,255,25,0.20) !important;
+  }
+
+  nav.links a:last-child {
+    border-right: none !important;
+  }
+
+  nav.links a::before,
+  nav.links a::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .nav-icon {
+    width: 52px !important;
+    height: 52px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 7px !important;
+    border: 2px solid #c6ff19 !important;
+    border-radius: 50% !important;
+    color: #c6ff19 !important;
+    font-size: 24px !important;
+    line-height: 1 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .nav-icon i {
+    font-size: 24px !important;
+  }
+
+  nav.links a:nth-child(4) .nav-icon i {
+    font-size: 21px !important;
+    margin-left: 2px !important;
+  }
+
+  nav.links a:nth-child(5) .nav-icon i {
+    font-size: 25px !important;
+  }
+
+  .nav-title {
+    display: block !important;
+    width: 100% !important;
+    color: #ffffff !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    line-height: 1.15 !important;
+    white-space: normal !important;
+  }
+
+  .nav-sub {
+    display: block !important;
+    width: 100% !important;
+    margin-top: 5px !important;
+    color: rgba(255,255,255,0.78) !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 8px !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+  }
+
+  .nav-arrow {
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 7px auto 0 !important;
+    border: 2px solid #c6ff19 !important;
+    border-radius: 50% !important;
+    color: #c6ff19 !important;
+    font-size: 16px !important;
+    line-height: 1 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .nav-arrow i {
+    font-size: 14px !important;
+  }
+
+  nav.links a:hover .nav-icon,
+  nav.links a:hover .nav-arrow {
+    background: #c6ff19 !important;
+    color: #07100b !important;
+  }
+
+}
+  /* FINAL ALL TOGETHER TITLE */
+
+@media (max-width: 768px) {
+
+  h1.hero-title::after {
+    font-family: "Brush Script MT", "Segoe Script", cursive !important;
+    font-size: clamp(48px, 13vw, 68px) !important;
+    font-weight: 500 !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    color: #c6ff19 !important;
+    text-shadow: 0 3px 15px rgba(0,0,0,0.45) !important;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .hero-cta-row .btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 16px !important;
+  }
+
+  .hero-cta-row .btn .fa-whatsapp {
+    font-size: 30px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .hero-cta-row .btn .fa-chevron-right {
+    font-size: 18px !important;
+    margin-left: auto !important;
+    flex-shrink: 0 !important;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .scroll-indicator {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-top: 38px !important;
+    color: #ffffff !important;
+  }
+
+  .scroll-mouse {
+    width: 30px !important;
+    height: 48px !important;
+    border: 2px solid #ffffff !important;
+    border-radius: 18px !important;
+    position: relative !important;
+  }
+
+  .scroll-mouse::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 8px !important;
+    left: 50% !important;
+    width: 4px !important;
+    height: 9px !important;
+    transform: translateX(-50%) !important;
+    background: #ffffff !important;
+    border-radius: 5px !important;
+  }
+
+  .scroll-chevron {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-top: 4px !important;
+    line-height: 8px !important;
+  }
+
+  .scroll-chevron i {
+    display: block !important;
+    font-size: 16px !important;
+    line-height: 8px !important;
+  }
+
+  .scroll-text {
+    margin-top: 17px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 9px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.28em !important;
+    color: #ffffff !important;
+  }
+
+}  
 </style>
 </head>
 <body>
@@ -1758,13 +1969,44 @@ nav.links a::after {
 <img alt="Jungle Project logo" src="assets/images/Logo.png?v=20260920"/>
 </a>
 <nav class="links">
-<a href="#story">Experience</a>
-<a href="#info">Before you come</a>
-<a href="#gallery">Gallery</a>
-<a href="#watch">Watch</a>
-<a href="#transport">Getting there</a>
+
+<a href="#story">
+  <span class="nav-icon"><i class="fa-solid fa-music"></i></span>
+  <span class="nav-title">Experience</span>
+  <span class="nav-sub">What to expect</span>
+  <span class="nav-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+</a>
+
+<a href="#info">
+  <span class="nav-icon"><i class="fa-solid fa-circle-info"></i></span>
+  <span class="nav-title">Before you come</span>
+  <span class="nav-sub">Tips &amp; info</span>
+  <span class="nav-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+</a>
+
+<a href="#gallery">
+  <span class="nav-icon"><i class="fa-solid fa-image"></i></span>
+  <span class="nav-title">Gallery</span>
+  <span class="nav-sub">Photos &amp; vibes</span>
+  <span class="nav-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+</a>
+
+<a href="#watch">
+  <span class="nav-icon"><i class="fa-solid fa-play"></i></span>
+  <span class="nav-title">Watch</span>
+  <span class="nav-sub">Videos &amp; reels</span>
+  <span class="nav-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+</a>
+
+<a href="#transport">
+  <span class="nav-icon"><i class="fa-solid fa-location-dot"></i></span>
+  <span class="nav-title">Getting there</span>
+  <span class="nav-sub">Maps &amp; transport</span>
+  <span class="nav-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+</a>
+
 </nav>
-<a class="btn nav-cta filled" href="https://wa.me/8562055615282" rel="noopener" target="_blank">Message us</a>
+<a class="btn nav-cta filled" href="https://wa.me/8562055615282" rel="noopener" target="_blank">Message us on WhatsApp</a>
 </div>
 </header>
 <div class="hero" id="top">
@@ -1774,10 +2016,24 @@ nav.links a::after {
 <h1 class="hero-title display">The night takes over <span class="glow">the trees.</span></h1>
 <p class="hero-sub">An open-air party under a canopy of old rain trees on the edge of town — <strong>live DJs, fire performance, body art</strong>, and a crowd that doesn’t sit down until sunrise.</p>
 <div class="hero-cta-row">
-<a class="btn" href="https://wa.me/8562055615282" rel="noopener" target="_blank">Message us on WhatsApp</a>
+<a class="btn" href="https://wa.me/8562055615282" rel="noopener" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i>
+  <span>Message us on WhatsApp</span>
+  <i class="fa-solid fa-chevron-right"></i>
+</a>
 <a class="text-link" href="#story">Read what it's actually like</a>
 </div>
-<div class="facts-row">
+<div class="scroll-indicator">
+  <div class="scroll-mouse"></div>
+
+  <div class="scroll-chevron">
+    <i class="fa-solid fa-chevron-down"></i>
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+
+  <div class="scroll-text">SCROLL TO EXPLORE</div>
+</div>
+  <div class="facts-row">
 <div>
 <div class="fact-label">When</div>
 <div class="fact-value">Fri, 10PM–4AM</div>
