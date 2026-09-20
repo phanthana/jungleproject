@@ -1312,6 +1312,62 @@ h1.hero-title::after {
   );
   pointer-events: none;
 }
+  /* ===== MOBILE SPACING FIX ===== */
+
+.wordmark img {
+  height: 125px !important;
+  max-width: 300px !important;
+}
+
+nav.links {
+  padding: 4px 0 8px !important;
+  margin-top: 0 !important;
+}
+
+nav.links a {
+  font-size: 9px !important;
+  line-height: 1.1 !important;
+  padding: 2px 1px !important;
+}
+
+nav.links a::before {
+  width: 30px !important;
+  height: 30px !important;
+  margin-bottom: 3px !important;
+  font-size: 14px !important;
+}
+
+nav.links a::after {
+  width: 18px !important;
+  height: 18px !important;
+  margin-top: 3px !important;
+  font-size: 12px !important;
+}
+
+.facts-row {
+  margin-top: 35px !important;
+  margin-bottom: 14px !important;
+}
+
+h1.hero-title::before {
+  font-size: 11px !important;
+  letter-spacing: 0.11em !important;
+}
+
+h1.hero-title::after {
+  font-size: clamp(48px, 14vw, 64px) !important;
+  line-height: 0.9 !important;
+}
+
+.hero-sub::before {
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+}
+
+.hero-cta-row .btn {
+  min-height: 54px !important;
+  font-size: 17px !important;
+}
 }
 </style>
 </head>
