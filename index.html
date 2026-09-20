@@ -805,6 +805,7 @@
 /* ===== MOBILE OPTIMIZATION ===== */
 @media (max-width: 768px) {
 
+  /* HEADER */
   header {
     position: relative;
   }
@@ -821,17 +822,19 @@
     max-width: 180px;
   }
 
-  .links {
+  nav.links {
     display: none;
   }
 
   .nav-cta {
+    display: inline-block;
     margin-left: auto;
     padding: 11px 18px;
     font-size: 13px;
     white-space: nowrap;
   }
 
+  /* HERO */
   .hero {
     min-height: calc(100vh - 90px);
   }
@@ -871,6 +874,42 @@
     padding: 15px 20px;
     font-size: 15px;
   }
+
+  /* EXPERIENCE */
+  .exp-row {
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    column-gap: 14px;
+    row-gap: 6px;
+    padding: 24px 0;
+    align-items: start;
+  }
+
+  .exp-icon {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .exp-row h3 {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    font-size: 19px;
+    line-height: 1.25;
+  }
+
+  .exp-row p {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.65;
+    color: rgba(159,179,168,0.96);
+    max-width: none;
+  }
+
 }
 </style>
 </head>
