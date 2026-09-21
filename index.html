@@ -2398,6 +2398,56 @@ nav.links a {
     white-space: pre !important;
   }
 
+} 
+/* FINAL MOBILE SPACING FIX */
+@media (max-width: 768px) {
+
+  /* Keep navigation exactly as it is */
+
+  /* Fix event information bar */
+  .facts-row {
+    width: 90% !important;
+    max-width: 340px !important;
+    height: 70px !important;
+    min-height: 70px !important;
+    padding: 5px 4px !important;
+    grid-template-columns: 1fr 1fr 1.2fr !important;
+    border-radius: 38px !important;
+  }
+
+  .facts-row > div {
+    height: 54px !important;
+    padding: 0 3px !important;
+  }
+
+  .facts-row > div:nth-child(1)::before,
+  .facts-row > div:nth-child(2)::before {
+    font-size: 20px !important;
+    margin-right: 4px !important;
+  }
+
+  .facts-row > div:nth-child(3)::before {
+    font-size: 21px !important;
+    margin-right: 4px !important;
+  }
+
+  .facts-row > div:nth-child(1)::after,
+  .facts-row > div:nth-child(2)::after {
+    font-size: 8px !important;
+  }
+
+  .facts-row > div:nth-child(3)::after {
+    font-size: 6.5px !important;
+    line-height: 1.15 !important;
+  }
+
+  /* Make All Together fit on the phone */
+  .hero-title,
+  .hero h1 {
+    font-size: 44px !important;
+    line-height: 0.95 !important;
+    margin-top: 8px !important;
+  }
 }  
 </style>
 </head>
