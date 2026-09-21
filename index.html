@@ -2452,6 +2452,195 @@ nav.links a {
     margin-top: 8px !important;
   }
 }  
+/* =========================================================
+   FINAL MOBILE REFERENCE MATCH
+   Navigation + Event Bar + Hero Title
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* =========================
+     NAVIGATION — EXACTLY 2 TEXT LINES
+     ========================= */
+
+  nav.links .nav-title {
+    width: auto !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    font-size: 10px !important;
+    line-height: 1.15 !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+  }
+
+  nav.links .nav-sub {
+    width: auto !important;
+    max-width: none !important;
+    font-size: 7.5px !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+    margin-top: 4px !important;
+  }
+
+
+  /* =========================
+     EVENT INFORMATION BAR
+     ========================= */
+
+  .facts-row {
+    width: 94% !important;
+    max-width: 390px !important;
+    height: 72px !important;
+    min-height: 72px !important;
+
+    padding: 5px 4px !important;
+
+    grid-template-columns: 1fr 1fr 1.18fr !important;
+
+    border-radius: 40px !important;
+    overflow: hidden !important;
+
+    margin: 0 auto 24px !important;
+  }
+
+  .facts-row > div {
+    height: 58px !important;
+    min-width: 0 !important;
+
+    padding: 0 3px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    overflow: hidden !important;
+  }
+
+  /* Vertical dividers */
+  .facts-row > div:not(:last-child) {
+    border-right: 2px solid #c6ff19 !important;
+  }
+
+
+  /* Calendar */
+
+  .facts-row > div:nth-child(1)::before {
+    font-size: 21px !important;
+    margin-right: 5px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .facts-row > div:nth-child(1)::after {
+    font-size: 8.5px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+
+  /* Clock */
+
+  .facts-row > div:nth-child(2)::before {
+    font-size: 21px !important;
+    margin-right: 5px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .facts-row > div:nth-child(2)::after {
+    font-size: 8.5px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+
+  /* Location */
+
+  .facts-row > div:nth-child(3)::before {
+    font-size: 22px !important;
+    margin-right: 4px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .facts-row > div:nth-child(3)::after {
+    font-size: 6.5px !important;
+    line-height: 1.2 !important;
+    white-space: pre !important;
+    width: auto !important;
+    max-width: none !important;
+    flex-shrink: 1 !important;
+    text-align: left !important;
+  }
+
+
+  /* =========================
+     MUSIC • PEOPLE • NATURE
+     ========================= */
+
+  h1.hero-title::before {
+    font-size: 11px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 6px !important;
+    white-space: nowrap !important;
+  }
+
+
+  /* =========================
+     ALL TOGETHER
+     ========================= */
+
+  h1.hero-title::after {
+    content: "All Together" !important;
+
+    display: block !important;
+
+    font-family: "Kaushan Script",
+                 "Brush Script MT",
+                 cursive !important;
+
+    font-size: 48px !important;
+    font-weight: 400 !important;
+
+    line-height: 0.95 !important;
+    letter-spacing: 0 !important;
+
+    white-space: nowrap !important;
+    text-align: center !important;
+
+    color: #c6ff19 !important;
+
+    margin-top: 0 !important;
+
+    text-shadow: 0 3px 15px rgba(0,0,0,0.55) !important;
+  }
+
+
+  /* =========================
+     DESCRIPTION
+     ========================= */
+
+  .hero-sub {
+    max-width: 350px !important;
+    margin: 20px auto 20px !important;
+
+    font-size: 15px !important;
+    line-height: 1.45 !important;
+
+    text-align: center !important;
+  }
+
+
+  /* =========================
+     WHATSAPP BUTTON
+     ========================= */
+
+  .hero-cta-row .btn {
+    width: 88% !important;
+    max-width: 360px !important;
+    min-height: 62px !important;
+
+    font-size: 17px !important;
+  }
+
+}  
 </style>
 </head>
 <body>
