@@ -2218,7 +2218,7 @@ nav.links a::after {
 
 } 
 
-/* FINAL MOBILE JUNGLE NAV */
+/* FINAL MOBILE JUNGLE NAV - REFERENCE MATCH */
 
 @media (max-width: 768px) {
 
@@ -2226,8 +2226,8 @@ nav.links a::after {
     display: grid !important;
     grid-template-columns: repeat(5, 1fr) !important;
     width: 100% !important;
-    margin: 0 !important;
-    padding: 0 8px !important;
+    margin: 18px 0 0 !important;
+    padding: 0 4px !important;
     gap: 0 !important;
     align-items: stretch !important;
   }
@@ -2235,36 +2235,37 @@ nav.links a::after {
   .nav-links > a {
     position: relative !important;
     width: 100% !important;
+    height: 205px !important;
     min-width: 0 !important;
-    height: 215px !important;
-    margin: 0 !important;
-    padding: 0 4px !important;
 
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: flex-start !important;
 
+    padding: 0 3px !important;
+    margin: 0 !important;
+
     box-sizing: border-box !important;
   }
 
-  /* Vertical separator lines */
+  /* Vertical separator */
   .nav-links > a:not(:first-child)::before {
     content: "" !important;
     position: absolute !important;
     left: 0 !important;
     top: 0 !important;
-    height: 215px !important;
     width: 1px !important;
-    background: rgba(198,255,25,0.45) !important;
+    height: 205px !important;
+    background: rgba(198,255,25,0.55) !important;
   }
 
   /* Main icon */
   .nav-links .nav-icon {
-    width: 78px !important;
-    height: 78px !important;
-    min-width: 78px !important;
-    min-height: 78px !important;
+    width: 70px !important;
+    height: 70px !important;
+    min-width: 70px !important;
+    min-height: 70px !important;
 
     display: flex !important;
     align-items: center !important;
@@ -2273,49 +2274,60 @@ nav.links a::after {
     border: 3px solid #c6ff19 !important;
     border-radius: 50% !important;
 
-    margin: 0 auto 10px !important;
+    margin: 0 auto 9px !important;
+    padding: 0 !important;
+
     box-sizing: border-box !important;
   }
 
   .nav-links .nav-icon i {
-    font-size: 32px !important;
+    font-size: 29px !important;
     color: #c6ff19 !important;
+    line-height: 1 !important;
   }
 
-  /* Title */
+  /* First line under icon */
   .nav-links .nav-title {
     display: block !important;
     width: 100% !important;
 
-    font-size: 17px !important;
-    line-height: 1.15 !important;
-    font-weight: 700 !important;
-    text-align: center !important;
-
     color: #ffffff !important;
+
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    line-height: 1.15 !important;
+
+    text-align: center !important;
+    white-space: normal !important;
+
     margin: 0 !important;
+    padding: 0 !important;
   }
 
-  /* Subtitle */
+  /* Second line under title */
   .nav-links .nav-sub {
     display: block !important;
     width: 100% !important;
 
-    font-size: 12px !important;
-    line-height: 1.25 !important;
-    font-weight: 400 !important;
-    text-align: center !important;
+    color: rgba(255,255,255,0.82) !important;
 
-    color: rgba(255,255,255,0.78) !important;
-    margin-top: 7px !important;
+    font-size: 11px !important;
+    font-weight: 400 !important;
+    line-height: 1.2 !important;
+
+    text-align: center !important;
+    white-space: normal !important;
+
+    margin: 6px 0 0 !important;
+    padding: 0 !important;
   }
 
-  /* Small arrow button */
+  /* Small arrow */
   .nav-links .nav-arrow {
-    width: 46px !important;
-    height: 46px !important;
-    min-width: 46px !important;
-    min-height: 46px !important;
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    min-height: 42px !important;
 
     display: flex !important;
     align-items: center !important;
@@ -2324,17 +2336,20 @@ nav.links a::after {
     border: 2px solid #c6ff19 !important;
     border-radius: 50% !important;
 
-    margin: 14px auto 0 !important;
+    margin: 12px auto 0 !important;
+    padding: 0 !important;
+
     box-sizing: border-box !important;
   }
 
   .nav-links .nav-arrow i {
-    font-size: 16px !important;
+    font-size: 15px !important;
     color: #c6ff19 !important;
     transform: none !important;
+    line-height: 1 !important;
   }
 
-}
+}    
 </style>
 </head>
 <body>
