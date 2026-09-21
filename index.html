@@ -2758,6 +2758,55 @@ nav.links a {
     color: #c6ff19 !important;
     text-shadow: 0 3px 15px rgba(0,0,0,0.55) !important;
   }
+}
+/* FINAL SMALL REFERENCE ADJUSTMENT */
+@media (max-width: 768px) {
+
+  /* Navigation text */
+  nav.links .nav-title {
+    font-size: 9.5px !important;
+    letter-spacing: -0.35px !important;
+  }
+
+  nav.links .nav-sub {
+    font-size: 7px !important;
+  }
+
+  /* Event bar */
+  .facts-row {
+    width: 94% !important;
+    max-width: 350px !important;
+    height: 68px !important;
+    min-height: 68px !important;
+    grid-template-columns: 0.95fr 0.95fr 1.30fr !important;
+    padding: 4px 5px !important;
+  }
+
+  .facts-row > div {
+    height: 56px !important;
+    padding: 0 3px !important;
+  }
+
+  .facts-row > div:nth-child(1)::after {
+    font-size: 7.5px !important;
+  }
+
+  .facts-row > div:nth-child(2)::after {
+    font-size: 7.5px !important;
+  }
+
+  .facts-row > div:nth-child(3)::after {
+    font-size: 6px !important;
+    line-height: 1.15 !important;
+    white-space: pre !important;
+  }
+
+  /* All Together */
+  h1.hero-title {
+    font-size: 40px !important;
+    line-height: 0.95 !important;
+    margin-bottom: 14px !important;
+  }
 }  
 </style>
 </head>
