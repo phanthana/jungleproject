@@ -1502,6 +1502,54 @@ nav.links a {
   }
 
 } 
+/* =========================================================
+   FINAL MOBILE OVERRIDE — REMOVE OLD NAVIGATION CONFLICTS
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* Remove old pseudo-icons and old pseudo-arrows */
+  nav.links > a::before,
+  nav.links > a::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  /* Force exactly five items in one row */
+  nav.links {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    grid-auto-flow: column !important;
+    width: 100% !important;
+    gap: 0 !important;
+    padding: 0 !important;
+    margin: 8px 0 0 !important;
+  }
+
+  nav.links > a,
+  nav.links > a:nth-child(1),
+  nav.links > a:nth-child(2),
+  nav.links > a:nth-child(3),
+  nav.links > a:nth-child(4),
+  nav.links > a:nth-child(5) {
+    grid-column: auto !important;
+    grid-row: 1 !important;
+  }
+
+  /* Keep the real Font Awesome icon circles */
+  nav.links .nav-icon {
+    display: flex !important;
+    width: 62px !important;
+    height: 62px !important;
+    min-width: 62px !important;
+    min-height: 62px !important;
+  }
+
+  /* Keep only the real arrow circles */
+  nav.links .nav-arrow {
+    display: flex !important;
+  }
+}  
 </style>
 </head>
 <body>
