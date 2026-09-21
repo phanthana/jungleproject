@@ -40,17 +40,20 @@
     margin: 0;
     background: var(--bg);
     color: var(--ink);
-    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    letter-spacing: -0.01em;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
   img { max-width: 100%; display: block; }
 
   .display {
-    font-family: 'Anton', 'Arial Narrow', sans-serif;
-    font-weight: 400;
-    line-height: 0.92;
-    letter-spacing: 0.005em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    line-height: 0.98;
+    letter-spacing: -0.025em;
     text-transform: uppercase;
   }
 
@@ -76,8 +79,8 @@
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
-    padding: 18px 0;
-    background: linear-gradient(to bottom, rgba(10,19,15,0.92), rgba(10,19,15,0));
+    padding: 14px 0;
+    background: linear-gradient(to bottom, rgba(7,15,11,0.96), rgba(7,15,11,0.72), rgba(7,15,11,0));
     backdrop-filter: blur(2px);
   }
   .nav-row {
@@ -94,32 +97,38 @@
     white-space: nowrap;
   }
   .wordmark img {
-    height: 58px;
+    height: 110px;
     width: auto;
+    max-width: 320px;
+    object-fit: contain;
     display: block;
   }
   nav.links {
     display: flex;
-    gap: 28px;
+    gap: clamp(16px, 2.2vw, 28px);
     align-items: center;
   }
   nav.links a {
     color: var(--ink-dim);
     text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
     transition: color 0.2s ease;
   }
   nav.links a:hover { color: var(--ink); }
   .btn {
     display: inline-block;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    padding: 11px 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    padding: 12px 22px;
+    border-radius: 999px;
     text-decoration: none;
     border: 1.5px solid var(--lime);
     color: var(--lime);
+    letter-spacing: 0.01em;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.16);
     transition: background 0.2s ease, color 0.2s ease;
     white-space: nowrap;
   }
@@ -135,7 +144,7 @@
   /* ---------- HERO ---------- */
   .hero {
     position: relative;
-    min-height: 100svh;
+    min-height: 92svh;
     display: flex;
     align-items: flex-end;
     padding-top: 108px;
@@ -143,7 +152,7 @@
   .hero-bg {
     position: absolute;
     inset: 0;
-    background-image: linear-gradient(180deg, rgba(8,15,11,0.35) 0%, rgba(8,15,11,0.55) 45%, rgba(6,11,9,0.97) 100%), url("assets/images/hero-background.jpeg");
+    background-image: linear-gradient(180deg, rgba(5,12,8,0.22) 0%, rgba(5,12,8,0.48) 42%, rgba(5,10,8,0.98) 100%), url("assets/images/hero-real.jpg");
     background-size: cover;
     background-position: center 30%;
     filter: saturate(1.05);
@@ -155,31 +164,39 @@
     padding-bottom: clamp(40px, 6vw, 72px);
   }
   .eyebrow {
-    color: var(--amber);
+    color: #ffffff;
     font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.18em;
+    font-weight: 800;
+    letter-spacing: 0.14em;
     line-height: 1.3;
+    margin-top: 35px;
     margin-bottom: 20px;
     text-transform: uppercase;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.9);
+    position: relative;
+    z-index: 5;
   }
   .eyebrow::before { content: "● "; color: var(--lime); }
+  .mobile-kicker { display: none; }
   h1.hero-title {
-    font-size: clamp(48px, 9.5vw, 116px);
-    line-height: 0.88;
-    letter-spacing: -0.01em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 0.92;
+    letter-spacing: -0.04em;
     margin: 0 0 26px;
-    max-width: 13ch;
+    max-width: 12ch;
+    text-wrap: balance;
   }
   h1.hero-title .glow {
     color: var(--lime);
     text-shadow: 0 0 26px rgba(198,241,53,0.55), 0 0 60px rgba(198,241,53,0.25);
   }
   .hero-sub {
-    color: var(--ink);
-    font-size: clamp(16px, 1.7vw, 18px);
-    max-width: 50ch;
-    line-height: 1.65;
+    color: rgba(237,238,227,0.88);
+    font-size: clamp(16px, 1.45vw, 18px);
+    max-width: 58ch;
+    line-height: 1.75;
     letter-spacing: 0.005em;
     margin: 0 0 36px;
     font-weight: 400;
@@ -188,9 +205,9 @@
   .hero-cta-row {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 16px 22px;
     flex-wrap: wrap;
-    margin-bottom: 44px;
+    margin-bottom: 40px;
   }
   .text-link {
     color: var(--ink);
@@ -198,7 +215,7 @@
     border-bottom: 1px solid var(--ink-dim);
     padding-bottom: 4px;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.01em;
   }
   .text-link:hover { border-color: var(--lime); color: var(--lime); }
@@ -206,21 +223,22 @@
   .facts-row {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    gap: clamp(20px, 4vw, 56px);
+    gap: clamp(22px, 4vw, 52px);
     padding-top: 28px;
     border-top: 1px solid var(--line);
     max-width: 720px;
   }
-  .fact-label { font-size: 12px; color: var(--ink-dim); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
-  .fact-value { font-size: clamp(17px, 2.4vw, 22px); font-weight: 700; }
+  .fact-label { font-size: 11px; color: var(--ink-dim); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 6px; }
+  .fact-value { font-size: clamp(16px, 2vw, 21px); font-weight: 800; }
 
   /* ---------- SECTION SPACING ---------- */
-  section { padding: clamp(64px, 10vw, 120px) 0; }
+  section { padding: clamp(72px, 9vw, 116px) 0; }
   .section-tag {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 800;
     color: var(--amber);
-    letter-spacing: 0.16em;
+    letter-spacing: 0.14em;
     line-height: 1.3;
     margin-bottom: 18px;
     text-transform: uppercase;
@@ -237,9 +255,11 @@
     .story-grid { grid-template-columns: 1.1fr 0.9fr; gap: 64px; }
   }
   .story-pull {
-    font-family: 'Anton', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.025em;
     text-transform: uppercase;
-    font-size: clamp(28px, 4vw, 44px);
+    font-size: clamp(28px, 3.8vw, 43px);
     line-height: 1.08;
     margin: 0 0 24px;
   }
@@ -250,13 +270,15 @@
   .story p {
     color: var(--ink-dim);
     font-size: 16px;
-    line-height: 1.7;
+    line-height: 1.72;
     max-width: 56ch;
     margin: 0 0 18px;
   }
   .story-photo {
     position: relative;
-    border: 1px solid var(--line);
+    border: 1px solid rgba(237,238,227,0.16);
+    border-radius: 12px;
+    overflow: hidden;
   }
   .story-photo img { filter: saturate(1.05); }
   .story-photo figcaption {
@@ -276,12 +298,14 @@
     align-items: flex-end;
     gap: 24px;
     flex-wrap: wrap;
-    margin-bottom: 44px;
+    margin-bottom: 38px;
   }
   .exp-head h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.035em;
     font-size: clamp(32px, 4.8vw, 56px);
     line-height: 0.94;
-    letter-spacing: 0;
     margin: 0;
   }
   .exp-head p { color: var(--ink-dim); max-width: 34ch; margin: 0; font-size: 15px; }
@@ -291,7 +315,7 @@
     display: grid;
     grid-template-columns: 44px 1fr;
     gap: 22px;
-    padding: 26px 0;
+    padding: 28px 0;
     border-bottom: 1px solid var(--line);
     align-items: baseline;
   }
@@ -300,13 +324,15 @@
   }
   .exp-icon { font-size: 22px; }
   .exp-row h3 {
-    font-family: 'Anton', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.025em;
     text-transform: uppercase;
-    font-size: 19px;
+    font-size: 18px;
+    line-height: 1.15;
     margin: 0;
-    letter-spacing: 0.01em;
   }
-  .exp-row p { margin: 4px 0 0; color: var(--ink-dim); font-size: 15px; line-height: 1.5; }
+  .exp-row p { margin: 4px 0 0; color: rgba(159,179,168,0.94); font-size: 15px; line-height: 1.72; }
   @media (min-width: 680px) { .exp-row p { margin: 0; } }
 
   /* ---------- GALLERY ---------- */
@@ -328,18 +354,23 @@
     width: min(72vw, 340px);
     scroll-snap-align: start;
     margin: 0;
-    border: 1px solid var(--line);
+    border: 1px solid rgba(237,238,227,0.16);
+    border-radius: 12px;
+    overflow: hidden;
     position: relative;
   }
-  .gallery-strip img { height: 420px; object-fit: cover; width: 100%; }
+  .gallery-strip img { height: 430px; object-fit: cover; width: 100%; }
   .gallery-strip figcaption {
     position: absolute;
-    bottom: 12px; left: 12px;
-    font-size: 12px;
+    bottom: 14px; left: 14px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
     color: var(--ink);
     background: rgba(6,11,9,0.7);
+    backdrop-filter: blur(8px);
     padding: 5px 10px;
-    letter-spacing: 0.03em;
+    border-radius: 999px;
   }
 
   /* ---------- WATCH ---------- */
@@ -351,10 +382,12 @@
     align-items: center;
   }
   @media (min-width: 880px) {
-    .watch-grid { grid-template-columns: 0.85fr 1.15fr; gap: 64px; }
+    .watch-grid { grid-template-columns: 0.85fr 1.15fr; gap: clamp(42px, 7vw, 80px); }
   }
   .watch-video {
-    border: 1px solid var(--line);
+    border: 1px solid rgba(237,238,227,0.16);
+    border-radius: 12px;
+    overflow: hidden;
     max-width: 360px;
     margin: 0 auto;
     position: relative;
@@ -364,20 +397,22 @@
     display: block;
   }
   .watch-copy h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.035em;
     font-size: clamp(30px, 4.2vw, 48px);
     line-height: 0.96;
-    letter-spacing: 0;
     margin: 0 0 20px;
   }
   .watch-copy p {
-    color: var(--ink-dim);
+    color: rgba(159,179,168,0.96);
     font-size: 16px;
     line-height: 1.7;
     max-width: 50ch;
     margin: 0 0 26px;
   }
 
-  /* ---------- BEFORE YOU COME (replaces tickets) ---------- */
+  /* ---------- BEFORE YOU COME ---------- */
   .info { border-top: 1px solid var(--line); }
   .info-grid {
     display: grid;
@@ -385,24 +420,30 @@
     gap: 1px;
     background: var(--line);
     border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 18px 50px rgba(0,0,0,0.18);
   }
   @media (min-width: 780px) { .info-grid { grid-template-columns: 1fr 1fr 1fr; } }
   .info-cell {
     background: var(--bg);
-    padding: 34px 28px;
+    padding: 32px 28px;
   }
-  .info-cell .k { font-size: 13px; color: var(--ink-dim); text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 12px; }
+  .info-cell .k { font-size: 13px; font-weight: 800; color: var(--ink-dim); text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 12px; }
   .info-cell .v {
-    font-family: 'Anton', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.025em;
     font-size: clamp(24px, 2.8vw, 30px);
+    line-height: 1.05;
     color: var(--lime);
     text-shadow: 0 0 20px rgba(198,241,53,0.3);
     margin-bottom: 8px;
     text-transform: uppercase;
   }
   .info-cell .v.amber { color: var(--amber); text-shadow: 0 0 20px rgba(255,178,62,0.3); }
-  .info-cell .note { color: var(--ink-dim); font-size: 14px; line-height: 1.5; }
-  .info-fine { margin-top: 22px; color: var(--ink-dim); font-size: 14px; }
+  .info-cell .note { color: var(--ink-dim); font-size: 14px; line-height: 1.65; }
+  .info-fine { margin-top: 22px; color: var(--ink-dim); font-size: 14px; line-height: 1.65; }
   .info-fine strong { color: var(--ink); }
 
   /* ---------- GETTING THERE ---------- */
@@ -410,20 +451,23 @@
   .transport-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 34px;
+    gap: 42px 56px;
   }
   @media (min-width: 780px) { .transport-grid { grid-template-columns: 1fr 1fr; } }
   .transport-card {
     border-left: 2px solid var(--ember);
-    padding-left: 22px;
+    padding-left: 20px;
   }
   .transport-card h3 {
-    font-family: 'Anton', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.025em;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.15;
     margin: 0 0 10px;
   }
-  .transport-card p { color: var(--ink-dim); font-size: 15px; line-height: 1.6; margin: 0; }
+  .transport-card p { color: var(--ink-dim); font-size: 15px; line-height: 1.72; margin: 0; }
   .transport-card a { color: var(--amber); text-decoration: none; font-weight: 600; }
   .transport-card a:hover { text-decoration: underline; }
 
@@ -441,21 +485,25 @@
     margin-bottom: 40px;
   }
   .footer-tagline {
-    font-family: 'Anton', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.025em;
     text-transform: uppercase;
     font-size: clamp(24px, 3.4vw, 36px);
+    line-height: 1.02;
     max-width: 12ch;
     margin: 0;
   }
   .footer-tagline .lime { color: var(--lime); }
-  .social-row { display: flex; gap: 18px; }
+  .social-row { display: flex; gap: 18px; flex-wrap: wrap; }
   .social-row a {
     color: var(--ink);
     text-decoration: none;
     border: 1px solid var(--line);
+    border-radius: 999px;
     padding: 10px 18px;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     transition: border-color 0.2s ease, color 0.2s ease;
   }
   .social-row a:hover { border-color: var(--lime); color: var(--lime); }
@@ -476,325 +524,308 @@
     html { scroll-behavior: auto; }
   }
 
-  /* =========================================================
-     JUNGLE PROJECT — TYPOGRAPHY & READABILITY POLISH
-     Body & Display: Arial
-     ========================================================= */
-
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 1.65;
-    letter-spacing: -0.01em;
-  }
-
-  .display,
-  .story-pull,
-  .exp-row h3,
-  .info-cell .v,
-  .transport-card h3,
-  .footer-tagline {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
-    letter-spacing: -0.025em;
-  }
-
-  .display {
-    line-height: 0.98;
-  }
-
-  header {
-    padding: 14px 0;
-    background: linear-gradient(
-      to bottom,
-      rgba(7, 15, 11, 0.96),
-      rgba(7, 15, 11, 0.72),
-      rgba(7, 15, 11, 0)
-    );
-  }
-
- .wordmark img {
-  height: 110px;
-  width: auto;
-  max-width: 320px;
-  object-fit: contain;
-  background: transparent;
-  border-radius: 0;
-  padding: 0;
-  box-shadow: none;
-}
-  nav.links {
-    gap: clamp(16px, 2.2vw, 28px);
-  }
-
-  nav.links a {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.01em;
-  }
-
-  .btn {
-    border-radius: 999px;
-    padding: 12px 22px;
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 0.01em;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.16);
-  }
-
-  .hero {
-    min-height: 92svh;
-  }
-
-  .hero-bg {
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(5, 12, 8, 0.22) 0%,
-        rgba(5, 12, 8, 0.48) 42%,
-        rgba(5, 10, 8, 0.98) 100%
-      ),
-      url("assets/images/hero-real.jpg");
-  }
-
-  h1.hero-title {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
-    font-size: clamp(42px, 6vw, 76px);
-    line-height: 0.92;
-    letter-spacing: -0.04em;
-    max-width: 12ch;
-    text-wrap: balance;
-  }
-
-  .eyebrow,
-  .section-tag {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 800;
-    letter-spacing: 0.14em;
-  }
-.eyebrow {
-  color: #ffffff;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.9);
-  position: relative;
-  z-index: 5;
-  margin-top: 35px;
-}
-  .hero-sub {
-    font-size: clamp(16px, 1.45vw, 18px);
-    line-height: 1.75;
-    max-width: 58ch;
-    color: rgba(237,238,227,0.88);
-  }
-
-  .hero-cta-row {
-    gap: 16px 22px;
-    margin-bottom: 40px;
-  }
-
-  .text-link {
-    font-weight: 700;
-  }
-
-  .facts-row {
-    gap: clamp(22px, 4vw, 52px);
-  }
-
-  .fact-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-  }
-
-  .fact-value {
-    font-size: clamp(16px, 2vw, 21px);
-    font-weight: 800;
-  }
-
-  section {
-    padding: clamp(72px, 9vw, 116px) 0;
-  }
-
-  .story-pull {
-    font-size: clamp(28px, 3.8vw, 43px);
-    line-height: 1.08;
-  }
-
-  .story p,
-  .watch-copy p,
-  .transport-card p,
-  .exp-row p {
-    line-height: 1.72;
-  }
-
-  .exp-head {
-    margin-bottom: 38px;
-  }
-
-  .exp-head h2,
-  .watch-copy h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
-    letter-spacing: -0.035em;
-  }
-
-  .exp-row {
-    padding: 28px 0;
-  }
-
-  .exp-row h3,
-  .transport-card h3 {
-    font-size: 18px;
-    line-height: 1.15;
-  }
-
-  .exp-row p {
-    font-size: 15px;
-    color: rgba(159,179,168,0.94);
-  }
-
-  .gallery-strip figure,
-  .story-photo,
-  .watch-video {
-    border-radius: 12px;
-    overflow: hidden;
-    border-color: rgba(237,238,227,0.16);
-  }
-
-  .gallery-strip img {
-    height: 430px;
-  }
-
-  .gallery-strip figcaption {
-    border-radius: 999px;
-    left: 14px;
-    bottom: 14px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    backdrop-filter: blur(8px);
-  }
-
-  .watch-grid {
-    gap: clamp(42px, 7vw, 80px);
-  }
-
-  .watch-copy p {
-    color: rgba(159,179,168,0.96);
-  }
-
-  .info-grid {
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 18px 50px rgba(0,0,0,0.18);
-  }
-
-  .info-cell {
-    padding: 32px 28px;
-  }
-
-  .info-cell .k {
-    font-weight: 800;
-  }
-
-  .info-cell .v {
-    line-height: 1.05;
-  }
-
-  .info-cell .note,
-  .info-fine {
-    line-height: 1.65;
-  }
-
-  .transport-grid {
-    gap: 42px 56px;
-  }
-
-  .transport-card {
-    padding-left: 20px;
-  }
-
-  .footer-tagline {
-    line-height: 1.02;
-  }
-
-  .social-row a {
-    border-radius: 999px;
-    font-weight: 700;
-  }
-
-  /* Better keyboard focus */
   a:focus-visible,
   button:focus-visible {
     outline: 2px solid var(--lime);
     outline-offset: 4px;
   }
 
-  /* Mobile: keep navigation and text comfortable */
-  @media (max-width: 719px) {
+  /* =========================================================
+     MOBILE (≤768px) — single consolidated block
+     ========================================================= */
+  @media (max-width: 768px) {
+
+    /* ---- Header / logo ---- */
     header {
-      padding: 10px 0;
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 12px 0 0;
+      background: transparent;
+      backdrop-filter: none;
+    }
+
+    .nav-row {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 0;
+      gap: 0;
+    }
+
+    .wordmark {
+      justify-content: center;
+      width: 100%;
     }
 
     .wordmark img {
-      height: 52px;
-      width: 52px;
+      height: 120px;
+      width: auto;
+      max-width: 285px;
     }
 
+    .nav-cta { display: none; }
+
+    /* ---- Five nav icons ---- */
+    nav.links {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      width: 100%;
+      margin: 5px 0 0;
+      gap: 0;
+    }
+
+    nav.links > a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 142px;
+      padding: 0 3px;
+      border-right: 1px solid rgba(198,255,25,0.65);
+      color: #ffffff;
+      text-decoration: none;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    nav.links > a:last-child { border-right: none; }
+
+    nav.links .nav-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 62px;
+      height: 62px;
+      margin: 0 auto 8px;
+      border: 3px solid #c6ff19;
+      border-radius: 50%;
+      color: #c6ff19;
+    }
+    nav.links .nav-icon i { font-size: 26px; }
+
+    nav.links .nav-title {
+      font-size: 9.5px;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.2px;
+      white-space: nowrap;
+    }
+
+    nav.links .nav-sub {
+      margin-top: 4px;
+      font-size: 7px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.85);
+      white-space: nowrap;
+    }
+
+    nav.links .nav-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      margin: 9px auto 0;
+      border: 1.5px solid #c6ff19;
+      border-radius: 50%;
+      color: #c6ff19;
+    }
+    nav.links .nav-arrow i { font-size: 10px; }
+
+    /* ---- Hero ---- */
     .hero {
-      min-height: 88svh;
-      padding-top: 92px;
+      min-height: 100svh;
+      height: 100svh;
+      padding-top: 0;
+      display: flex;
+      align-items: flex-start;
+      overflow: hidden;
+    }
+    .hero-bg { background-position: center center; }
+
+    .hero-inner {
+      width: 100%;
+      min-height: 100svh;
+      padding: 300px 16px 30px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-sizing: border-box;
     }
 
-    h1.hero-title {
-      font-size: clamp(48px, 15vw, 76px);
-      max-width: 10ch;
+    .eyebrow { display: none; }
+
+    .mobile-kicker {
+      display: block;
+      order: 2;
+      margin: 0 0 8px;
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-align: center;
+      white-space: nowrap;
     }
 
-    .hero-sub {
-      font-size: 15.5px;
-      line-height: 1.72;
-    }
-
+    /* ---- Event info pill ---- */
     .facts-row {
-      grid-template-columns: 1fr;
-      gap: 14px;
-      max-width: 260px;
+      order: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.3fr;
+      align-items: center;
+      width: 94%;
+      max-width: 370px;
+      height: 72px;
+      margin: 0 auto 20px;
+      padding: 5px 6px;
+      border: 2px solid #c6ff19;
+      border-radius: 40px;
+      background: rgba(5,10,8,0.7);
+      box-sizing: border-box;
+      overflow: hidden;
     }
-
     .facts-row > div {
-      padding-bottom: 14px;
-      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 58px;
+      padding: 0 4px;
+      border-right: 2px solid #c6ff19;
+      box-sizing: border-box;
+    }
+    .facts-row > div:last-child { border-right: none; }
+    .facts-row .fact-label,
+    .facts-row .fact-value { display: none; }
+
+    .facts-row > div:nth-child(1)::before,
+    .facts-row > div:nth-child(2)::before,
+    .facts-row > div:nth-child(3)::before {
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: #c6ff19;
+      flex-shrink: 0;
+      margin-right: 5px;
+    }
+    .facts-row > div:nth-child(1)::before { content: "\f073"; font-size: 20px; }
+    .facts-row > div:nth-child(2)::before { content: "\f017"; font-size: 20px; }
+    .facts-row > div:nth-child(3)::before { content: "\f3c5"; font-size: 21px; }
+
+    .facts-row > div:nth-child(1)::after,
+    .facts-row > div:nth-child(2)::after {
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 8px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .facts-row > div:nth-child(1)::after { content: "EVERY FRIDAY"; }
+    .facts-row > div:nth-child(2)::after { content: "10 PM \2013 4 AM"; }
+    .facts-row > div:nth-child(3)::after {
+      content: "JUST 3 KM\A FROM CENTRAL VANG VIENG";
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 6.5px;
+      font-weight: 900;
+      line-height: 1.2;
+      white-space: pre;
+      text-align: left;
     }
 
-    .facts-row > div:last-child {
-      border-bottom: 0;
+    /* ---- "All Together" title ---- */
+    h1.hero-title {
+      order: 2;
+      font-family: "Kaushan Script", "Brush Script MT", cursive;
+      font-size: 44px;
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 0;
+      text-transform: none;
+      max-width: 100%;
+      white-space: nowrap;
+      text-align: center;
+      margin: 0 auto 16px;
+    }
+    h1.hero-title .glow {
+      color: #c6ff19;
+      text-shadow: 0 3px 15px rgba(0,0,0,0.55);
     }
 
-    .gallery-strip img {
-      height: 390px;
+    /* ---- Description ---- */
+    .hero-sub {
+      order: 3;
+      max-width: 340px;
+      margin: 0 auto 18px;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.45;
+      text-align: center;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.7);
     }
 
-    .social-row {
-      flex-wrap: wrap;
+    /* ---- WhatsApp button ---- */
+    .hero-cta-row {
+      order: 4;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
     }
+    .hero-cta-row .text-link { display: none; }
+    .hero-cta-row .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 88%;
+      max-width: 360px;
+      min-height: 60px;
+      padding: 0 18px;
+      border: 2px solid #c6ff19;
+      border-radius: 50px;
+      background: #c6ff19;
+      color: #07100b;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17px;
+      font-weight: 900;
+      box-sizing: border-box;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    }
+    .hero-cta-row .btn .fa-whatsapp { font-size: 28px; }
+    .hero-cta-row .btn .fa-chevron-right { font-size: 14px; margin-left: auto; }
+
+    .scroll-indicator { display: none; }
+
+    /* ---- Experience rows ---- */
+    .exp-row {
+      grid-template-columns: 38px minmax(0,1fr);
+      column-gap: 14px;
+      row-gap: 6px;
+      padding: 24px 0;
+      align-items: start;
+    }
+    .exp-icon { grid-row: 1 / span 2; font-size: 24px; }
+    .exp-row h3 { grid-column: 2; grid-row: 1; margin: 0; font-size: 19px; }
+    .exp-row p {
+      grid-column: 2;
+      grid-row: 2;
+      margin: 0;
+      font-size: 16px;
+      color: rgba(159,179,168,0.96);
+      max-width: none;
+    }
+
+    .gallery-strip img { height: 390px; }
+    .social-row { flex-wrap: wrap; }
   }
 
   @media (max-width: 520px) {
-    .wrap {
-      padding-left: 18px;
-      padding-right: 18px;
-    }
-
-    .hero-cta-row .btn {
-      width: 100%;
-      text-align: center;
-    }
-
-    .hero-cta-row {
-      align-items: stretch;
-    }
-
+    .wrap { padding-left: 18px; padding-right: 18px; }
     .gallery-strip {
       margin-left: -18px;
       margin-right: -18px;
@@ -802,2390 +833,7 @@
       padding-right: 18px;
     }
   }
-
-/* ===== MOBILE OPTIMIZATION ===== */
-@media (max-width: 768px) {
-
-  /* HEADER */
-  header {
-    position: relative;
- 
-
- .nav-row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  min-height: auto;
-  padding: 10px 12px 8px;
-  gap: 6px;
-}
-
-.wordmark {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  order: 1;
-}
-
-.wordmark img {
-  height: 125px;
-  width: auto;
-  max-width: 300px;
-  object-fit: contain;}
-.nav-cta {
-  display: none !important;
-}
-nav.links {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  width: 100%;
-  order: 3;
-  gap: 16px 4px;
-  padding: 14px 8px 16px;
-  margin-top: 8px;
-}
-
-nav.links a {
-  grid-column: span 2;
-}
-
-nav.links a:nth-child(4) {
-  grid-column: 2 / span 2;
-}
-
-nav.links a:nth-child(5) {
-  grid-column: 4 / span 2;
-}
-
-nav.links a {
-  text-align: center;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.25;
-  white-space: normal;
-}
-}
-nav.links::-webkit-scrollbar {
-  display: none;
-}
-nav.links a {
-  flex: 0 0 auto;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.35;
-}
-
-  .nav-cta {
-  display: none;
-}
-
-  /* HERO */
-  .hero {
-    min-height: calc(100vh - 90px);
-  }
-
-  .hero-inner {
-    padding: 35px 20px 55px;
-  }
-
-  .eyebrow {
-    margin-top: 15px;
-    font-size: 11px;
-    line-height: 1.5;
-    letter-spacing: 0.08em;
-  }
-
-  h1.hero-title {
-    font-size: clamp(44px, 13vw, 64px);
-    line-height: 0.95;
-    margin-top: 24px;
-  }
-
-  .hero-sub {
-    font-size: 16px;
-    line-height: 1.6;
-    max-width: 100%;
-    margin-top: 22px;
-  }
-
-  .hero-cta-row {
-    margin-top: 28px;
-    margin-bottom: 20px;
-  }
-
-  .hero-cta-row .btn {
-    width: 100%;
-    text-align: center;
-    padding: 15px 20px;
-    font-size: 15px;
-  }
-
-  /* EXPERIENCE */
-  .exp-row {
-    display: grid;
-    grid-template-columns: 38px minmax(0, 1fr);
-    column-gap: 14px;
-    row-gap: 6px;
-    padding: 24px 0;
-    align-items: start;
-  }
-
-  .exp-icon {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-    font-size: 24px;
-    line-height: 1.2;
-  }
-
-  .exp-row h3 {
-    grid-column: 2;
-    grid-row: 1;
-    margin: 0;
-    font-size: 19px;
-    line-height: 1.25;
-  }
-
-  .exp-row p {
-    grid-column: 2;
-    grid-row: 2;
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.65;
-    color: rgba(159,179,168,0.96);
-    max-width: none;
-  }
-  /* ===== FINAL JUNGLE PROJECT MOBILE HOMEPAGE ===== */
-@media (max-width: 768px) {
-
-  /* Put header over the hero image */
-  header {
-    position: absolute !important;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 50;
-    padding: 18px 0 0 !important;
-    background: transparent !important;
-    backdrop-filter: none !important;
-  }
-
-  /* Center the logo */
-  .nav-row {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    width: 100% !important;
-    padding: 0 10px !important;
-    gap: 6px !important;
-  }
-
-  .wordmark {
-    order: 1 !important;
-    display: flex !important;
-    justify-content: center !important;
-    width: 100% !important;
-  }
-
-  .wordmark img {
-    height: 135px !important;
-    width: auto !important;
-    max-width: 330px !important;
-    object-fit: contain !important;
-  }
-
-  /* Hide the separate Message Us button */
-  .nav-cta {
-    display: none !important;
-  }
-
-  /* Five navigation buttons */
-  nav.links {
-    order: 2 !important;
-    display: grid !important;
-    grid-template-columns: repeat(5, 1fr) !important;
-    width: 100% !important;
-    gap: 0 !important;
-    padding: 8px 0 12px !important;
-    margin: 4px 0 0 !important;
-    border-top: 1px solid rgba(255,255,255,0.18);
-    border-bottom: 1px solid rgba(255,255,255,0.18);
-  }
-
-  nav.links a {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    text-align: center !important;
-    width: 100% !important;
-    min-width: 0 !important;
-    padding: 4px 2px !important;
-    font-size: 10px !important;
-    line-height: 1.15 !important;
-    font-weight: 800 !important;
-    color: #ffffff !important;
-    text-decoration: none !important;
-    white-space: normal !important;
-    border-left: 1px solid rgba(255,255,255,0.12);
-  }
-
-  nav.links a:first-child {
-    border-left: none;
-  }
-
-  /* Lime icons */
-  nav.links a::before {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    margin-bottom: 5px;
-    border: 2px solid #d8ff3e;
-    border-radius: 50%;
-    color: #d8ff3e;
-    font-size: 16px;
-    font-weight: 900;
-  }
-
-  nav.links a:nth-child(1)::before {
-    content: "✦";
-  }
-
-  nav.links a:nth-child(2)::before {
-    content: "i";
-  }
-
-  nav.links a:nth-child(3)::before {
-    content: "▣";
-  }
-
-  nav.links a:nth-child(4)::before {
-    content: "▶";
-    font-size: 13px;
-  }
-
-  nav.links a:nth-child(5)::before {
-    content: "⌖";
-  }
-
-  /* Small arrow under each navigation item */
-  nav.links a::after {
-    content: "›";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    margin-top: 5px;
-    border: 1px solid rgba(255,255,255,0.45);
-    border-radius: 50%;
-    font-size: 14px;
-    color: #ffffff;
-  }
-
-  /* Make hero fill the whole phone screen */
-  .hero {
-    min-height: 100svh !important;
-    height: 100svh !important;
-    position: relative !important;
-    display: flex !important;
-    align-items: flex-end !important;
-    overflow: hidden !important;
-  }
-
-  .hero-bg {
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    background-position: center center !important;
-  }
-
-  /* Move hero content below the logo/navigation */
-  .hero-inner {
-    position: relative !important;
-    z-index: 5 !important;
-    width: 100% !important;
-    padding: 0 18px 35px !important;
-    margin: 0 !important;
-  }
-
-  /* Keep the current hero text for now, but make it smaller */
-  h1.hero-title {
-    font-size: clamp(40px, 12vw, 58px) !important;
-    line-height: 0.95 !important;
-    max-width: 11ch !important;
-    margin-top: 18px !important;
-  }
-
-  .hero-sub {
-    font-size: 15px !important;
-    line-height: 1.45 !important;
-  }
-
-  .facts-row {
-    margin-top: 20px !important;
-  }
-
-
-/* =========================================================
-   FINAL MOBILE JUNGLE PROJECT DESIGN
-   Clean single navigation + hero layout
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-  /* ---------- HEADER ---------- */
-
-  header {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    z-index: 50 !important;
-    padding: 12px 0 0 !important;
-    background: transparent !important;
-    backdrop-filter: none !important;
-  }
-
-  .nav-row {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    width: 100% !important;
-    padding: 0 4px !important;
-    gap: 0 !important;
-  }
-
-  /* LOGO */
-  .wordmark {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-
-  .wordmark img {
-    height: 125px !important;
-    width: auto !important;
-    max-width: 290px !important;
-    background: transparent !important;
-    padding: 0 !important;
-    box-shadow: none !important;
-  }
-
-  /* Hide top WhatsApp button */
-  .nav-cta {
-    display: none !important;
-  }
-
-
-  /* ---------- FIVE NAVIGATION ITEMS ---------- */
-
-  nav.links {
-    display: grid !important;
-    grid-template-columns: repeat(5, 1fr) !important;
-    width: 100% !important;
-    margin: 8px 0 0 !important;
-    padding: 0 !important;
-    gap: 0 !important;
-    border: none !important;
-  }
-
-  nav.links > a {
-    position: relative !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    width: 100% !important;
-    min-width: 0 !important;
-    height: 185px !important;
-    padding: 0 3px !important;
-    margin: 0 !important;
-    border: none !important;
-    border-right: 1px solid rgba(198,255,25,0.55) !important;
-    color: #ffffff !important;
-    text-decoration: none !important;
-    text-align: center !important;
-    box-sizing: border-box !important;
-  }
-
-  nav.links > a:last-child {
-    border-right: none !important;
-  }
-
-
-  /* GREEN ICON CIRCLE */
-
-  nav.links .nav-icon {
-    width: 62px !important;
-    height: 62px !important;
-    min-width: 62px !important;
-    min-height: 62px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin: 0 auto 8px !important;
-    padding: 0 !important;
-    border: 3px solid #c6ff19 !important;
-    border-radius: 50% !important;
-    color: #c6ff19 !important;
-    background: transparent !important;
-    box-sizing: border-box !important;
-  }
-
-  nav.links .nav-icon i {
-    font-size: 26px !important;
-    color: #c6ff19 !important;
-    line-height: 1 !important;
-  }
-
-
-  /* NAVIGATION TITLE */
-
-  nav.links .nav-title {
-    display: block !important;
-    width: 100% !important;
-    min-height: 22px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    color: #ffffff !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 11px !important;
-    font-weight: 800 !important;
-    line-height: 1.15 !important;
-    text-align: center !important;
-    white-space: normal !important;
-  }
-
-
-  /* NAVIGATION SUBTITLE */
-
-  nav.links .nav-sub {
-    display: block !important;
-    width: 100% !important;
-    margin: 4px 0 0 !important;
-    padding: 0 !important;
-    color: rgba(255,255,255,0.82) !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 8px !important;
-    font-weight: 400 !important;
-    line-height: 1.2 !important;
-    text-align: center !important;
-    white-space: normal !important;
-  }
-
-
-  /* SMALL ARROW */
-
-  nav.links .nav-arrow {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 25px !important;
-    height: 25px !important;
-    min-width: 25px !important;
-    min-height: 25px !important;
-    margin: 7px auto 0 !important;
-    padding: 0 !important;
-    border: 1.5px solid #c6ff19 !important;
-    border-radius: 50% !important;
-    box-sizing: border-box !important;
-    color: #c6ff19 !important;
-  }
-
-  nav.links .nav-arrow i {
-    font-size: 10px !important;
-    color: #c6ff19 !important;
-    line-height: 1 !important;
-  }
-
-
-  /* ---------- HERO ---------- */
-
-  .hero {
-    min-height: 100svh !important;
-    height: 100svh !important;
-    padding-top: 0 !important;
-    overflow: hidden !important;
-    display: flex !important;
-    align-items: flex-start !important;
-  }
-
-  .hero-bg {
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    background-size: cover !important;
-    background-position: center center !important;
-  }
-
-  .hero-inner {
-    position: relative !important;
-    z-index: 10 !important;
-    width: 100% !important;
-    min-height: 100svh !important;
-    padding: 395px 16px 30px !important;
-    margin: 0 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    text-align: center !important;
-    box-sizing: border-box !important;
-  }
-
-
-  /* Hide old eyebrow */
-
-  .eyebrow {
-    display: none !important;
-  }
-
-
-  /* ---------- EVENT INFORMATION BAR ---------- */
-
-  .facts-row {
-    order: 1 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 100% !important;
-    max-width: 355px !important;
-    min-height: 58px !important;
-    margin: 0 auto 14px !important;
-    padding: 8px 12px !important;
-    border: 2px solid #c6ff19 !important;
-    border-radius: 35px !important;
-    background: rgba(5,10,8,0.58) !important;
-    box-sizing: border-box !important;
-  }
-
-  .facts-row > div {
-    display: none !important;
-  }
-
-  .facts-row::before {
-    content: "EVERY FRIDAY  |  10 PM - 4 AM  |  JUST 3 KM FROM CENTRAL VANG VIENG" !important;
-    display: block !important;
-    width: 100% !important;
-    color: #ffffff !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 8.5px !important;
-    font-weight: 800 !important;
-    line-height: 1.3 !important;
-    letter-spacing: 0.02em !important;
-    text-align: center !important;
-  }
-
-
-  /* ---------- MUSIC / PEOPLE / NATURE ---------- */
-
-  h1.hero-title {
-    order: 2 !important;
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    font-size: 0 !important;
-    line-height: 1 !important;
-    text-align: center !important;
-    color: #c6ff19 !important;
-  }
-
-  h1.hero-title::before {
-    content: "MUSIC  •  PEOPLE  •  NATURE" !important;
-    display: block !important;
-    margin: 0 0 5px !important;
-    color: #ffffff !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 11px !important;
-    font-weight: 800 !important;
-    letter-spacing: 0.10em !important;
-    line-height: 1.2 !important;
-    white-space: nowrap !important;
-  }
-
-
-  /* ---------- ALL TOGETHER ---------- */
-
-  h1.hero-title::after {
-    content: "All Together" !important;
-    display: block !important;
-    color: #c6ff19 !important;
-    font-family: "Kaushan Script", "Brush Script MT", cursive !important;
-    font-size: 48px !important;
-    font-weight: 400 !important;
-    line-height: 0.95 !important;
-    letter-spacing: 0 !important;
-    white-space: nowrap !important;
-    text-align: center !important;
-    text-shadow: 0 3px 12px rgba(0,0,0,0.55) !important;
-  }
-
-
-  /* ---------- DESCRIPTION ---------- */
-
-  .hero-sub {
-    order: 3 !important;
-    width: 100% !important;
-    max-width: 350px !important;
-    margin: 18px auto 18px !important;
-    padding: 0 !important;
-    color: #ffffff !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 15px !important;
-    font-weight: 500 !important;
-    line-height: 1.45 !important;
-    text-align: center !important;
-  }
-
-
-  /* ---------- WHATSAPP ---------- */
-
-  .hero-cta-row {
-    order: 4 !important;
-    width: 100% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .hero-cta-row .text-link {
-    display: none !important;
-  }
-
-  .hero-cta-row .btn {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 12px !important;
-    width: 90% !important;
-    max-width: 360px !important;
-    min-height: 58px !important;
-    padding: 0 18px !important;
-    border: 2px solid #c6ff19 !important;
-    border-radius: 40px !important;
-    background: #c6ff19 !important;
-    color: #07100b !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 17px !important;
-    font-weight: 900 !important;
-    box-sizing: border-box !important;
-  }
-
-  .hero-cta-row .btn .fa-whatsapp {
-    display: inline-block !important;
-    font-size: 28px !important;
-    line-height: 1 !important;
-  }
-
-  .hero-cta-row .btn .fa-chevron-right {
-    display: inline-block !important;
-    font-size: 15px !important;
-    margin-left: 4px !important;
-  }
-
-
-  /* ---------- SCROLL INDICATOR ---------- */
-
-  .scroll-indicator {
-    display: none !important;
-  }
-
-} 
-/* =========================================================
-   FINAL MOBILE OVERRIDE — REMOVE OLD NAVIGATION CONFLICTS
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-  /* Remove old pseudo-icons and old pseudo-arrows */
-  nav.links > a::before,
-  nav.links > a::after {
-    content: none !important;
-    display: none !important;
-  }
-
-  /* Force exactly five items in one row */
-  nav.links {
-    display: grid !important;
-    grid-template-columns: repeat(5, 1fr) !important;
-    grid-auto-flow: column !important;
-    width: 100% !important;
-    gap: 0 !important;
-    padding: 0 !important;
-    margin: 8px 0 0 !important;
-  }
-
-  nav.links > a,
-  nav.links > a:nth-child(1),
-  nav.links > a:nth-child(2),
-  nav.links > a:nth-child(3),
-  nav.links > a:nth-child(4),
-  nav.links > a:nth-child(5) {
-    grid-column: auto !important;
-    grid-row: 1 !important;
-  }
-
-  /* Keep the real Font Awesome icon circles */
-  nav.links .nav-icon {
-    display: flex !important;
-    width: 62px !important;
-    height: 62px !important;
-    min-width: 62px !important;
-    min-height: 62px !important;
-  }
-
-  /* Keep only the real arrow circles */
-  nav.links .nav-arrow {
-    display: flex !important;
-  }
-}  
-/* =========================================================
-   JUNGLE PROJECT — FINAL MOBILE DESIGN
-   Match approved mobile reference
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-  /* =========================
-     HEADER + LOGO
-     ========================= */
-
-  header {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    z-index: 100 !important;
-    padding: 12px 0 0 !important;
-    background: transparent !important;
-    backdrop-filter: none !important;
-  }
-
-  .nav-row {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    width: 100% !important;
-    padding: 0 !important;
-    gap: 0 !important;
-  }
-
-  .wordmark {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-  }
-
-  .wordmark img {
-    height: 125px !important;
-    width: auto !important;
-    max-width: 300px !important;
-    background: transparent !important;
-    padding: 0 !important;
-    border: none !important;
-    box-shadow: none !important;
-  }
-
-  .nav-cta {
-    display: none !important;
-  }
-
-
-  /* =========================
-     FIVE NAVIGATION COLUMNS
-     ========================= */
-
-  nav.links {
-    display: grid !important;
-    grid-template-columns: repeat(5, 1fr) !important;
-    width: 100% !important;
-    margin: 5px 0 0 !important;
-    padding: 0 !important;
-    gap: 0 !important;
-    border: none !important;
-  }
-
-  nav.links > a {
-    position: relative !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-
-    width: 100% !important;
-    min-width: 0 !important;
-    height: 250px !important;
-
-    padding: 0 3px !important;
-    margin: 0 !important;
-
-    color: #ffffff !important;
-    text-decoration: none !important;
-    text-align: center !important;
-
-    border: none !important;
-    border-right: 1px solid rgba(198,255,25,0.65) !important;
-
-    box-sizing: border-box !important;
-  }
-
-  nav.links > a:last-child {
-    border-right: none !important;
-  }
-
-
-  /* REMOVE ALL OLD PSEUDO ICONS */
-  nav.links > a::before,
-  nav.links > a::after {
-    content: none !important;
-    display: none !important;
-  }
-
-
-  /* =========================
-     MAIN LIME ICON
-     ========================= */
-
-  nav.links .nav-icon {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    width: 72px !important;
-    height: 72px !important;
-    min-width: 72px !important;
-    min-height: 72px !important;
-
-    margin: 0 auto 10px !important;
-    padding: 0 !important;
-
-    border: 3px solid #c6ff19 !important;
-    border-radius: 50% !important;
-
-    background: transparent !important;
-    color: #c6ff19 !important;
-
-    box-sizing: border-box !important;
-  }
-
-  nav.links .nav-icon i {
-    display: block !important;
-    color: #c6ff19 !important;
-    font-size: 30px !important;
-    line-height: 1 !important;
-  }
-
-
-  /* =========================
-     TITLE — LINE 1
-     ========================= */
-
-  nav.links .nav-title {
-    display: block !important;
-
-    width: 100% !important;
-    min-height: 20px !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-
-    color: #ffffff !important;
-
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 11px !important;
-    font-weight: 800 !important;
-    line-height: 1.2 !important;
-
-    text-align: center !important;
-    white-space: nowrap !important;
-  }
-
-
-  /* =========================
-     SUBTITLE — LINE 2
-     ========================= */
-
-  nav.links .nav-sub {
-    display: block !important;
-
-    width: 100% !important;
-
-    margin: 5px 0 0 !important;
-    padding: 0 !important;
-
-    color: rgba(255,255,255,0.9) !important;
-
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 8px !important;
-    font-weight: 400 !important;
-    line-height: 1.2 !important;
-
-    text-align: center !important;
-    white-space: nowrap !important;
-  }
-
-
-  /* =========================
-     SMALL ARROW CIRCLE
-     ========================= */
-
-  nav.links .nav-arrow {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    width: 25px !important;
-    height: 25px !important;
-    min-width: 25px !important;
-    min-height: 25px !important;
-
-    margin: 10px auto 0 !important;
-    padding: 0 !important;
-
-    border: 1.5px solid #c6ff19 !important;
-    border-radius: 50% !important;
-
-    color: #c6ff19 !important;
-    background: transparent !important;
-
-    box-sizing: border-box !important;
-  }
-
-  nav.links .nav-arrow i {
-    color: #c6ff19 !important;
-    font-size: 10px !important;
-    line-height: 1 !important;
-  }
-
-
-  /* =========================
-     HERO
-     ========================= */
-
-  .hero {
-    position: relative !important;
-
-    min-height: 100svh !important;
-    height: 100svh !important;
-
-    padding-top: 0 !important;
-
-    display: flex !important;
-    align-items: flex-start !important;
-
-    overflow: hidden !important;
-  }
-
-  .hero-bg {
-    position: absolute !important;
-    inset: 0 !important;
-
-    width: 100% !important;
-    height: 100% !important;
-
-    background-size: cover !important;
-    background-position: center center !important;
-  }
-
-  .hero-inner {
-    position: relative !important;
-    z-index: 10 !important;
-
-    width: 100% !important;
-    min-height: 100svh !important;
-
-    padding: 395px 16px 35px !important;
-    margin: 0 !important;
-
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-
-    text-align: center !important;
-
-    box-sizing: border-box !important;
-  }
-
-
-  /* =========================
-     REMOVE OLD EYEBROW
-     ========================= */
-
-  .eyebrow {
-    display: none !important;
-  }
-
-
-  /* =========================
-     EVENT INFORMATION BAR
-     ========================= */
-
-  /* ==============================
-   EVENT INFO BAR — MOBILE
-============================== */
-
-.facts-row {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr 1.25fr !important;
-  align-items: center !important;
-  width: 92% !important;
-  max-width: 740px !important;
-  height: 86px !important;
-  margin: 0 auto 28px !important;
-  padding: 6px 8px !important;
-
-  border: 2px solid #c6ff19 !important;
-  border-radius: 50px !important;
-  background: rgba(5, 10, 8, 0.72) !important;
-  box-sizing: border-box !important;
-}
-
-.facts-row > div {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  height: 64px !important;
-  padding: 0 8px !important;
-  border-right: 2px solid #c6ff19 !important;
-  box-sizing: border-box !important;
-}
-
-.facts-row > div:last-child {
-  border-right: none !important;
-}
-
-/* Hide original text */
-.facts-row .fact-label,
-.facts-row .fact-value {
-  display: none !important;
-}
-
-/* CALENDAR */
-.facts-row > div:nth-child(1)::before {
-  content: "\f073" !important;
-  font-family: "Font Awesome 6 Free" !important;
-  font-weight: 900 !important;
-  font-size: 28px !important;
-  color: #c6ff19 !important;
-  margin-right: 10px !important;
-  flex-shrink: 0 !important;
-}
-
-.facts-row > div:nth-child(1)::after {
-  content: "EVERY FRIDAY" !important;
-  color: #ffffff !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: 11px !important;
-  font-weight: 900 !important;
-  white-space: nowrap !important;
-}
-
-/* CLOCK */
-.facts-row > div:nth-child(2)::before {
-  content: "\f017" !important;
-  font-family: "Font Awesome 6 Free" !important;
-  font-weight: 900 !important;
-  font-size: 28px !important;
-  color: #c6ff19 !important;
-  margin-right: 10px !important;
-  flex-shrink: 0 !important;
-}
-
-.facts-row > div:nth-child(2)::after {
-  content: "10 PM – 4 AM" !important;
-  color: #ffffff !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: 11px !important;
-  font-weight: 900 !important;
-  white-space: nowrap !important;
-}
-
-/* LOCATION */
-.facts-row > div:nth-child(3)::before {
-  content: "\f3c5" !important;
-  font-family: "Font Awesome 6 Free" !important;
-  font-weight: 900 !important;
-  font-size: 28px !important;
-  color: #c6ff19 !important;
-  margin-right: 10px !important;
-  flex-shrink: 0 !important;
-}
-
-.facts-row > div:nth-child(3)::after {
-  content: "JUST 3 KM\A FROM CENTRAL VANG VIENG" !important;
-  color: #ffffff !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: 9px !important;
-  font-weight: 900 !important;
-  line-height: 1.25 !important;
-  white-space: pre !important;
-}
-
-/* MOBILE SIZE */
-@media (max-width: 768px) {
-
-  .facts-row {
-    width: 92% !important;
-    height: 86px !important;
-    margin: 0 auto 28px !important;
-    padding: 6px 5px !important;
-  }
-
-  .facts-row > div {
-    height: 64px !important;
-    padding: 0 4px !important;
-  }
-
-  .facts-row > div:nth-child(1)::before,
-  .facts-row > div:nth-child(2)::before,
-  .facts-row > div:nth-child(3)::before {
-    font-size: 27px !important;
-    margin-right: 8px !important;
-  }
-
-  .facts-row > div:nth-child(1)::after,
-  .facts-row > div:nth-child(2)::after {
-    font-size: 10px !important;
-  }
-
-  .facts-row > div:nth-child(3)::after {
-    font-size: 8px !important;
-  }
-}
-
-  /* =========================
-     MUSIC • PEOPLE • NATURE
-     ========================= */
-
-  h1.hero-title {
-    order: 2 !important;
-
-    width: 100% !important;
-    max-width: none !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-
-    font-size: 0 !important;
-    line-height: 1 !important;
-
-    text-align: center !important;
-  }
-
-  h1.hero-title::before {
-    content: "MUSIC  •  PEOPLE  •  NATURE" !important;
-
-    display: block !important;
-
-    margin: 0 0 8px !important;
-
-    color: #ffffff !important;
-
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 12px !important;
-    font-weight: 900 !important;
-
-    letter-spacing: 0.10em !important;
-    line-height: 1.2 !important;
-
-    white-space: nowrap !important;
-  }
-
-
-  /* =========================
-     ALL TOGETHER
-     ========================= */
-
-  h1.hero-title::after {
-    content: "All Together" !important;
-
-    display: block !important;
-
-    color: #c6ff19 !important;
-
-    font-family: "Kaushan Script", "Brush Script MT", cursive !important;
-
-    font-size: 58px !important;
-    font-weight: 400 !important;
-
-    line-height: 0.95 !important;
-    letter-spacing: 0 !important;
-
-    white-space: nowrap !important;
-
-    text-align: center !important;
-
-    text-shadow: 0 3px 15px rgba(0,0,0,0.55) !important;
-  }
-
-
-  /* =========================
-     DESCRIPTION
-     ========================= */
-
-  .hero-sub {
-    order: 3 !important;
-
-    width: 100% !important;
-    max-width: 650px !important;
-
-    margin: 28px auto 30px !important;
-    padding: 0 !important;
-
-    color: #ffffff !important;
-
-    font-family: Arial, Helvetica, sans-serif !important;
-
-    font-size: 16px !important;
-    font-weight: 400 !important;
-
-    line-height: 1.5 !important;
-
-    text-align: center !important;
-
-    text-shadow: 0 2px 8px rgba(0,0,0,0.8) !important;
-  }
-
-  .hero-sub strong {
-    color: #ffffff !important;
-  }
-
-
-  /* =========================
-     WHATSAPP BUTTON
-     ========================= */
-
-  .hero-cta-row {
-    order: 4 !important;
-
-    width: 100% !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .hero-cta-row .text-link {
-    display: none !important;
-  }
-
-  .hero-cta-row .btn {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    gap: 16px !important;
-
-    width: 88% !important;
-    max-width: 670px !important;
-
-    min-height: 68px !important;
-
-    padding: 0 22px !important;
-
-    border: 2px solid #c6ff19 !important;
-    border-radius: 50px !important;
-
-    background: #c6ff19 !important;
-    color: #07100b !important;
-
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 18px !important;
-    font-weight: 900 !important;
-
-    box-sizing: border-box !important;
-
-    box-shadow: 0 8px 30px rgba(0,0,0,0.35) !important;
-  }
-
-  .hero-cta-row .btn .fa-whatsapp {
-    display: inline-block !important;
-
-    font-size: 32px !important;
-    line-height: 1 !important;
-  }
-
-  .hero-cta-row .btn .fa-chevron-right {
-    display: inline-block !important;
-
-    font-size: 20px !important;
-    margin-left: auto !important;
-  }
-
-
-  /* =========================
-     NO SCROLL INDICATOR
-     ========================= */
-
-  .scroll-indicator {
-    display: none !important;
-  }
-
-} 
-  
-/* =========================================================
-   FINAL SMALL FIX — NAV TEXT + EVENT BAR
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-  /* ----- NAVIGATION: allow titles to use 2 lines ----- */
-
-  nav.links .nav-title {
-    white-space: normal !important;
-    width: 100% !important;
-    max-width: 125px !important;
-    min-height: 24px !important;
-    font-size: 11px !important;
-    line-height: 1.15 !important;
-    text-align: center !important;
-  }
-
-  nav.links .nav-sub {
-    white-space: nowrap !important;
-    font-size: 8px !important;
-    line-height: 1.2 !important;
-    margin-top: 4px !important;
-  }
-
-
-  /* ----- EVENT BAR: remove old duplicated version ----- */
-
-  .facts-row::before,
-  .facts-row::after {
-    content: none !important;
-    display: none !important;
-  }
-
-  .facts-row {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr 1.25fr !important;
-    width: 92% !important;
-    height: 82px !important;
-    min-height: 82px !important;
-    margin: 0 auto 28px !important;
-    padding: 8px 10px !important;
-    border: 2px solid #c6ff19 !important;
-    border-radius: 50px !important;
-    background: rgba(5,10,8,0.65) !important;
-    overflow: hidden !important;
-    box-sizing: border-box !important;
-  }
-
-  .facts-row > div {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    height: 58px !important;
-    min-width: 0 !important;
-    padding: 0 7px !important;
-    border-right: 2px solid #c6ff19 !important;
-    box-sizing: border-box !important;
-  }
-
-  .facts-row > div:last-child {
-    border-right: none !important;
-  }
-
-  .facts-row .fact-label,
-  .facts-row .fact-value {
-    display: none !important;
-  }
-
-  /* Calendar */
-  .facts-row > div:nth-child(1)::before {
-    content: "\f073" !important;
-    display: block !important;
-    margin-right: 8px !important;
-    color: #c6ff19 !important;
-    font-family: "Font Awesome 6 Free" !important;
-    font-weight: 900 !important;
-    font-size: 25px !important;
-  }
-
-  .facts-row > div:nth-child(1)::after {
-    content: "EVERY FRIDAY" !important;
-    display: block !important;
-    color: #ffffff !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 10px !important;
-    font-weight: 900 !important;
-    white-space: nowrap !important;
-  }
-
-  /* Clock */
-  .facts-row > div:nth-child(2)::before {
-    content: "\f017" !important;
-    display: block !important;
-    margin-right: 8px !important;
-    color: #c6ff19 !important;
-    font-family: "Font Awesome 6 Free" !important;
-    font-weight: 900 !important;
-    font-size: 25px !important;
-  }
-
-  .facts-row > div:nth-child(2)::after {
-    content: "10 PM - 4 AM" !important;
-    display: block !important;
-    color: #ffffff !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 10px !important;
-    font-weight: 900 !important;
-    white-space: nowrap !important;
-  }
-
-  /* Location */
-  .facts-row > div:nth-child(3)::before {
-    content: "\f3c5" !important;
-    display: block !important;
-    margin-right: 8px !important;
-    color: #c6ff19 !important;
-    font-family: "Font Awesome 6 Free" !important;
-    font-weight: 900 !important;
-    font-size: 27px !important;
-  }
-
-  .facts-row > div:nth-child(3)::after {
-    content: "JUST 3 KM\A FROM CENTRAL VANG VIENG" !important;
-    display: block !important;
-    white-space: pre !important;
-    color: #ffffff !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 8px !important;
-    font-weight: 900 !important;
-    line-height: 1.25 !important;
-    text-align: left !important;
-  }
-} 
-/* =========================================================
-   FINAL PHONE SIZE FIX
-   Only adjust navigation + event bar
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-  /* ----- SMALLER NAVIGATION CIRCLES ----- */
-
-  nav.links .nav-icon {
-    width: 62px !important;
-    height: 62px !important;
-    min-width: 62px !important;
-    min-height: 62px !important;
-    margin-bottom: 8px !important;
-  }
-
-  nav.links .nav-icon i {
-    font-size: 26px !important;
-  }
-
-
-  /* ----- NAVIGATION TEXT ----- */
-
-  nav.links .nav-title {
-    width: 100% !important;
-    max-width: 68px !important;
-    font-size: 10px !important;
-    line-height: 1.15 !important;
-    white-space: normal !important;
-    text-align: center !important;
-  }
-
-  nav.links .nav-sub {
-    width: 100% !important;
-    max-width: 70px !important;
-    font-size: 7px !important;
-    line-height: 1.2 !important;
-    white-space: nowrap !important;
-    margin-top: 4px !important;
-  }
-
-  nav.links .nav-arrow {
-    width: 24px !important;
-    height: 24px !important;
-    min-width: 24px !important;
-    min-height: 24px !important;
-    margin-top: 9px !important;
-  }
-
-
-  /* ----- EVENT BAR ----- */
-
-  .facts-row {
-    width: 92% !important;
-    max-width: 355px !important;
-
-    height: 78px !important;
-    min-height: 78px !important;
-
-    padding: 6px 5px !important;
-
-    grid-template-columns: 1fr 1fr 1.15fr !important;
-
-    border-radius: 40px !important;
-
-    overflow: hidden !important;
-  }
-
-  .facts-row > div {
-    height: 58px !important;
-    padding: 0 4px !important;
-
-    overflow: hidden !important;
-  }
-
-
-  /* Calendar */
-
-  .facts-row > div:nth-child(1)::before {
-    font-size: 22px !important;
-    margin-right: 5px !important;
-    flex-shrink: 0 !important;
-  }
-
-  .facts-row > div:nth-child(1)::after {
-    font-size: 9px !important;
-    white-space: nowrap !important;
-  }
-
-
-  /* Clock */
-
-  .facts-row > div:nth-child(2)::before {
-    font-size: 22px !important;
-    margin-right: 5px !important;
-    flex-shrink: 0 !important;
-  }
-
-  .facts-row > div:nth-child(2)::after {
-    font-size: 9px !important;
-    white-space: nowrap !important;
-  }
-
-
-  /* Location */
-
-  .facts-row > div:nth-child(3)::before {
-    font-size: 23px !important;
-    margin-right: 5px !important;
-    flex-shrink: 0 !important;
-  }
-
-  .facts-row > div:nth-child(3)::after {
-    font-size: 7px !important;
-    line-height: 1.2 !important;
-    white-space: pre !important;
-  }
-
-} 
-/* FINAL MOBILE SPACING FIX */
-@media (max-width: 768px) {
-
-  /* Keep navigation exactly as it is */
-
-  /* Fix event information bar */
-  .facts-row {
-    width: 90% !important;
-    max-width: 340px !important;
-    height: 70px !important;
-    min-height: 70px !important;
-    padding: 5px 4px !important;
-    grid-template-columns: 0.9fr 0.9fr 1.4fr !important;
-    border-radius: 38px !important;
-  }
-
-  .facts-row > div {
-    height: 54px !important;
-    padding: 0 3px !important;
-  }
-
-  .facts-row > div:nth-child(1)::before,
-  .facts-row > div:nth-child(2)::before {
-    font-size: 20px !important;
-    margin-right: 4px !important;
-  }
-
-  .facts-row > div:nth-child(3)::before {
-    font-size: 21px !important;
-    margin-right: 4px !important;
-  }
-
-  .facts-row > div:nth-child(1)::after,
-  .facts-row > div:nth-child(2)::after {
-    font-size: 8px !important;
-  }
-
-  .facts-row > div:nth-child(3)::after {
-    font-size: 6px !important;
-    line-height: 1.15 !important;
-    white-space: pre !important;
-    width: 125px !important;
-    max-width: 125px !important;
-  }
-
-  /* Make All Together fit on the phone */
-  .hero-title,
-  .hero h1 {
-    font-size: 44px !important;
-    line-height: 0.95 !important;
-    margin-top: 8px !important;
-  }
-}  
-/* =========================================================
-   FINAL MOBILE REFERENCE MATCH
-   Navigation + Event Bar + Hero Title
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-  /* =========================
-     NAVIGATION — EXACTLY 2 TEXT LINES
-     ========================= */
-
-  nav.links .nav-title {
-    width: auto !important;
-    max-width: none !important;
-    min-height: 0 !important;
-    font-size: 10px !important;
-    line-height: 1.15 !important;
-    white-space: nowrap !important;
-    text-align: center !important;
-  }
-
-  nav.links .nav-sub {
-    width: auto !important;
-    max-width: none !important;
-    font-size: 7.5px !important;
-    line-height: 1.2 !important;
-    white-space: nowrap !important;
-    margin-top: 4px !important;
-  }
-
-
-  /* =========================
-     EVENT INFORMATION BAR
-     ========================= */
-
-  .facts-row {
-    width: 94% !important;
-    max-width: 390px !important;
-    height: 72px !important;
-    min-height: 72px !important;
-
-    padding: 5px 4px !important;
-
-    grid-template-columns: 1fr 1fr 1.18fr !important;
-
-    border-radius: 40px !important;
-    overflow: hidden !important;
-
-    margin: 0 auto 24px !important;
-  }
-
-  .facts-row > div {
-    height: 58px !important;
-    min-width: 0 !important;
-
-    padding: 0 3px !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    overflow: hidden !important;
-  }
-
-  /* Vertical dividers */
-  .facts-row > div:not(:last-child) {
-    border-right: 2px solid #c6ff19 !important;
-  }
-
-
-  /* Calendar */
-
-  .facts-row > div:nth-child(1)::before {
-    font-size: 21px !important;
-    margin-right: 5px !important;
-    flex-shrink: 0 !important;
-  }
-
-  .facts-row > div:nth-child(1)::after {
-    font-size: 8.5px !important;
-    white-space: nowrap !important;
-    flex-shrink: 0 !important;
-  }
-
-
-  /* Clock */
-
-  .facts-row > div:nth-child(2)::before {
-    font-size: 21px !important;
-    margin-right: 5px !important;
-    flex-shrink: 0 !important;
-  }
-
-  .facts-row > div:nth-child(2)::after {
-    font-size: 8.5px !important;
-    white-space: nowrap !important;
-    flex-shrink: 0 !important;
-  }
-
-
-  /* Location */
-
-  .facts-row > div:nth-child(3)::before {
-    font-size: 22px !important;
-    margin-right: 4px !important;
-    flex-shrink: 0 !important;
-  }
-
-  .facts-row > div:nth-child(3)::after {
-    font-size: 6.5px !important;
-    line-height: 1.2 !important;
-    white-space: pre !important;
-    width: auto !important;
-    max-width: none !important;
-    flex-shrink: 1 !important;
-    text-align: left !important;
-  }
-
-
-  /* =========================
-     MUSIC • PEOPLE • NATURE
-     ========================= */
-
-  h1.hero-title::before {
-    font-size: 11px !important;
-    line-height: 1.2 !important;
-    margin-bottom: 6px !important;
-    white-space: nowrap !important;
-  }
-
-
-  /* =========================
-     ALL TOGETHER
-     ========================= */
-
-  h1.hero-title::after {
-    content: "All Together" !important;
-
-    display: block !important;
-
-    font-family: "Kaushan Script",
-                 "Brush Script MT",
-                 cursive !important;
-
-    font-size: 48px !important;
-    font-weight: 400 !important;
-
-    line-height: 0.95 !important;
-    letter-spacing: 0 !important;
-
-    white-space: nowrap !important;
-    text-align: center !important;
-
-    color: #c6ff19 !important;
-
-    margin-top: 0 !important;
-
-    text-shadow: 0 3px 15px rgba(0,0,0,0.55) !important;
-  }
-
-
-  /* =========================
-     DESCRIPTION
-     ========================= */
-
-  .hero-sub {
-    max-width: 350px !important;
-    margin: 20px auto 20px !important;
-
-    font-size: 15px !important;
-    line-height: 1.45 !important;
-
-    text-align: center !important;
-  }
-
-
-  /* =========================
-     WHATSAPP BUTTON
-     ========================= */
-
-  .hero-cta-row .btn {
-    width: 88% !important;
-    max-width: 360px !important;
-    min-height: 62px !important;
-
-    font-size: 17px !important;
-  }
-
-}
-/* =========================================================
-   FINAL REFERENCE MATCH — MOBILE
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-  /* NAVIGATION — one line title + one line subtitle */
-  nav.links .nav-title {
-    width: 100% !important;
-    max-width: none !important;
-    font-size: 8.5px !important;
-    line-height: 1.1 !important;
-    letter-spacing: -0.25px !important;
-    white-space: nowrap !important;
-    text-align: center !important;
-  }
-
-  nav.links .nav-sub {
-    width: 100% !important;
-    max-width: none !important;
-    font-size: 6.5px !important;
-    line-height: 1.15 !important;
-    letter-spacing: -0.1px !important;
-    white-space: nowrap !important;
-    text-align: center !important;
-  }
-
-
-  /* EVENT BAR — balanced 3 columns */
-  .facts-row {
-    width: 96% !important;
-    max-width: 355px !important;
-    height: 72px !important;
-    min-height: 72px !important;
-
-    padding: 5px 6px !important;
-
-    grid-template-columns: 1fr 1fr 1.35fr !important;
-
-    border-radius: 40px !important;
-    overflow: hidden !important;
-  }
-
-  .facts-row > div {
-    height: 58px !important;
-    min-width: 0 !important;
-    padding: 0 4px !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    overflow: hidden !important;
-  }
-
-  /* Calendar */
-  .facts-row > div:nth-child(1)::before {
-    font-size: 20px !important;
-    margin-right: 5px !important;
-    flex-shrink: 0 !important;
-  }
-
-  .facts-row > div:nth-child(1)::after {
-    font-size: 8px !important;
-    white-space: nowrap !important;
-    flex-shrink: 0 !important;
-  }
-
-  /* Clock */
-  .facts-row > div:nth-child(2)::before {
-    font-size: 20px !important;
-    margin-right: 5px !important;
-    flex-shrink: 0 !important;
-  }
-
-  .facts-row > div:nth-child(2)::after {
-    font-size: 8px !important;
-    white-space: nowrap !important;
-    flex-shrink: 0 !important;
-  }
-
-  /* Location */
-  .facts-row > div:nth-child(3)::before {
-    font-size: 21px !important;
-    margin-right: 5px !important;
-    flex-shrink: 0 !important;
-  }
-
-  .facts-row > div:nth-child(3)::after {
-    font-size: 6.5px !important;
-    line-height: 1.2 !important;
-    white-space: pre !important;
-    width: auto !important;
-    max-width: none !important;
-    flex-shrink: 1 !important;
-    text-align: left !important;
-  }
-
-
-  /* ALL TOGETHER */
-  h1.hero-title {
-    font-family: "Kaushan Script", "Brush Script MT", cursive !important;
-    font-size: 48px !important;
-    font-weight: 400 !important;
-    line-height: 1 !important;
-    letter-spacing: 0 !important;
-    text-transform: none !important;
-    max-width: none !important;
-    white-space: nowrap !important;
-    text-align: center !important;
-    margin: 0 auto 20px !important;
-  }
-
-  h1.hero-title .glow {
-    color: #c6ff19 !important;
-    text-shadow: 0 3px 15px rgba(0,0,0,0.55) !important;
-  }
-}
-/* FINAL SMALL REFERENCE ADJUSTMENT */
-@media (max-width: 768px) {
-
-  /* Navigation text */
-  nav.links .nav-title {
-    font-size: 9.5px !important;
-    letter-spacing: -0.35px !important;
-  }
-
-  nav.links .nav-sub {
-    font-size: 7px !important;
-  }
-
-  /* Event bar */
-  .facts-row {
-    width: 94% !important;
-    max-width: 350px !important;
-    height: 68px !important;
-    min-height: 68px !important;
-    grid-template-columns: 0.95fr 0.95fr 1.30fr !important;
-    padding: 4px 5px !important;
-  }
-
-  .facts-row > div {
-    height: 56px !important;
-    padding: 0 3px !important;
-  }
-
-  .facts-row > div:nth-child(1)::after {
-    font-size: 7.5px !important;
-  }
-
-  .facts-row > div:nth-child(2)::after {
-    font-size: 7.5px !important;
-  }
-
-  .facts-row > div:nth-child(3)::after {
-    font-size: 6px !important;
-    line-height: 1.15 !important;
-    white-space: pre !important;
-  }
-
-  /* All Together */
-  h1.hero-title {
-    font-size: 40px !important;
-    line-height: 0.95 !important;
-    margin-bottom: 14px !important;
-  }
-} 
-/* FINAL CLEANUP — REMOVE DUPLICATE TITLE */
-@media (max-width: 768px) {
-
-  /* Remove the old CSS-generated duplicate */
-  h1.hero-title::before,
-  h1.hero-title::after {
-    content: none !important;
-    display: none !important;
-  }
-
-  /* Style the REAL All Together title */
-  h1.hero-title {
-    font-family: "Kaushan Script", "Brush Script MT", cursive !important;
-    font-size: 40px !important;
-    font-weight: 400 !important;
-    line-height: 1 !important;
-    letter-spacing: 0 !important;
-    text-transform: none !important;
-    max-width: 100% !important;
-    white-space: nowrap !important;
-    text-align: center !important;
-    margin: 0 auto 18px !important;
-  }
-
-  h1.hero-title .glow {
-    color: #c6ff19 !important;
-  }
-
-  /* Event bar — give all 3 sections enough room */
-  .facts-row {
-    width: 96% !important;
-    max-width: 360px !important;
-    height: 70px !important;
-    min-height: 70px !important;
-    padding: 4px 5px !important;
-    grid-template-columns: 1fr 1fr 1.25fr !important;
-    border-radius: 40px !important;
-  }
-
-  .facts-row > div {
-    height: 56px !important;
-    padding: 0 3px !important;
-  }
-
-  .facts-row > div:nth-child(1)::after {
-    font-size: 7.5px !important;
-  }
-
-  .facts-row > div:nth-child(2)::after {
-    font-size: 7.5px !important;
-  }
-
-  .facts-row > div:nth-child(3)::after {
-    font-size: 6px !important;
-    line-height: 1.15 !important;
-    white-space: pre !important;
-    width: auto !important;
-    max-width: none !important;
-  }
-}
-/* MOBILE FIT — MATCH REFERENCE */
-@media (max-width: 768px) {
-
-  .hero {
-    min-height: 100vh !important;
-    height: auto !important;
-  }
-
-  .hero-content {
-    padding-top: 8px !important;
-    padding-bottom: 25px !important;
-  }
-
-  .wordmark img {
-    max-height: 240px !important;
-    margin-bottom: 5px !important;
-  }
-
-  .links {
-    margin-top: 0 !important;
-    margin-bottom: 18px !important;
-  }
-
-  .links a {
-    padding-bottom: 8px !important;
-  }
-
-  .facts-row {
-    margin-top: 5px !important;
-    margin-bottom: 18px !important;
-  }
-
-  .hero-title {
-    margin-top: 0 !important;
-    margin-bottom: 8px !important;
-  }
-
-  .hero-subtitle,
-  .hero-description {
-    margin-top: 5px !important;
-    margin-bottom: 18px !important;
-  }
-
-  .hero-cta,
-  .whatsapp-button {
-    margin-top: 8px !important;
-  }
-}
-/* FINAL MOBILE HEIGHT FIX — MATCH REFERENCE */
-@media (max-width: 768px) {
-
-  /* Shorten the navigation area */
-  nav.links > a {
-    height: 132px !important;
-  }
-
-  /* Move the event bar and lower content upward */
-  .hero-inner {
-    padding-top: 270px !important;
-  }
-
-  /* Keep the event bar close to the navigation */
-  .facts-row {
-    margin-top: 0 !important;
-    margin-bottom: 14px !important;
-  }
-
-  /* Keep Music / People / Nature close to the event bar */
-  h1.hero-title {
-    margin-top: 0 !important;
-    margin-bottom: 12px !important;
-  }
-
-  /* Bring description and WhatsApp into view */
-  .hero-sub {
-    margin-top: 8px !important;
-    margin-bottom: 14px !important;
-  }
-
-  .hero-cta-row .btn {
-    min-height: 58px !important;
-  }
-}
-/* FINAL HERO POSITION */
-@media (max-width: 768px) {
-  .hero-inner {
-    padding-top: 300px !important;
-  }
-} 
-/* FINAL REFERENCE FINISH */
-@media (max-width: 768px) {
-
-  /* MUSIC • PEOPLE • NATURE */
-  h1.hero-title::before {
-    content: "MUSIC • PEOPLE • NATURE" !important;
-    display: block !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 11px !important;
-    font-weight: 800 !important;
-    letter-spacing: 0.16em !important;
-    line-height: 1.2 !important;
-    color: #ffffff !important;
-    margin-bottom: 8px !important;
-    text-align: center !important;
-    white-space: nowrap !important;
-  }
-
-  /* Description */
-  .hero-sub {
-    max-width: 350px !important;
-    margin: 8px auto 14px !important;
-    font-size: 15px !important;
-    line-height: 1.45 !important;
-    text-align: center !important;
-  }
-
-  /* WhatsApp button */
-  .hero-cta-row {
-  justify-content: center !important;
-  margin-top: -15px !important;
-  margin-bottom: 0 !important;
-}
-
-  .hero-cta-row .btn {
-    width: 88% !important;
-    max-width: 360px !important;
-    min-height: 62px !important;
-  }
-}  
-
-/* FINAL EVENT BAR FIT — MOBILE ONLY */
-@media (max-width: 768px) {
-
-  .facts-row {
-    width: 92% !important;
-    max-width: 720px !important;
-    min-height: 82px !important;
-    height: 82px !important;
-    padding: 6px 4px !important;
-    display: grid !important;
-    grid-template-columns: 1fr 1fr 1.25fr !important;
-    align-items: center !important;
-    box-sizing: border-box !important;
-  }
-
-  .facts-row > div {
-    height: 64px !important;
-    min-width: 0 !important;
-    padding: 0 5px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    box-sizing: border-box !important;
-    overflow: hidden !important;
-  }
-
-  /* Calendar */
-  .facts-row > div:nth-child(1)::before {
-    font-size: 25px !important;
-    margin-right: 7px !important;
-    flex-shrink: 0 !important;
-  }
-
-  .facts-row > div:nth-child(1)::after {
-    font-size: 10px !important;
-    white-space: nowrap !important;
-  }
-
-  /* Clock */
-  .facts-row > div:nth-child(2)::before {
-    font-size: 25px !important;
-    margin-right: 7px !important;
-    flex-shrink: 0 !important;
-  }
-
-  .facts-row > div:nth-child(2)::after {
-    font-size: 10px !important;
-    white-space: nowrap !important;
-  }
-
-  /* Location */
-/* FINAL EVENT BAR — MOBILE FIT */
-@media (max-width: 768px) {
-
-  .facts-row {
-    width: 94% !important;
-    max-width: 370px !important;
-    height: 74px !important;
-    min-height: 74px !important;
-    padding: 4px 3px !important;
-    display: grid !important;
-    grid-template-columns: 1.10fr 1.10fr 1.40fr !important;
-    align-items: center !important;
-    box-sizing: border-box !important;
-    border-radius: 40px !important;
-    overflow: hidden !important;
-  }
-
-  .facts-row > div {
-    height: 58px !important;
-    min-width: 0 !important;
-    padding: 0 2px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    box-sizing: border-box !important;
-    overflow: visible !important;
-  }
-
-  /* CALENDAR */
-  .facts-row > div:nth-child(1)::before {
-    font-size: 19px !important;
-    margin-right: 5px !important;
-    flex-shrink: 0 !important;
-  }
-
-  .facts-row > div:nth-child(1)::after {
-    font-size: 7.5px !important;
-    white-space: nowrap !important;
-    flex-shrink: 0 !important;
-  }
-
-  /* CLOCK */
-  .facts-row > div:nth-child(2)::before {
-    font-size: 19px !important;
-    margin-right: 5px !important;
-    flex-shrink: 0 !important;
-  }
-
-  .facts-row > div:nth-child(2)::after {
-    font-size: 7.5px !important;
-    white-space: nowrap !important;
-    flex-shrink: 0 !important;
-  }
-
-  /* LOCATION */
-  .facts-row > div:nth-child(3)::before {
-    font-size: 20px !important;
-    margin-right: 5px !important;
-    flex-shrink: 0 !important;
-  }
-
-  .facts-row > div:nth-child(3)::after {
-    font-size: 6px !important;
-    line-height: 1.15 !important;
-    white-space: pre !important;
-    text-align: left !important;
-    flex-shrink: 0 !important;
-  }
-
-  .facts-row > div:last-child {
-    border-right: none !important;
-  }
-}
-/* FINAL HOMEPAGE POLISH — MOBILE */
-@media (max-width: 768px) {
-
-  /* LOGO — slightly more balanced */
-  .wordmark img {
-    height: 120px !important;
-    max-width: 285px !important;
-  }
-
-  /* NAVIGATION — keep current design, slightly tighter */
-  nav.links > a {
-    height: 142px !important;
-  }
-
-  /* Keep the current event bar, but make it slightly lower-profile */
-  .facts-row {
-    width: 94% !important;
-    max-width: 380px !important;
-    height: 68px !important;
-    min-height: 68px !important;
-    margin-bottom: 12px !important;
-  }
-
-  /* MUSIC • PEOPLE • NATURE */
-  h1.hero-title::before {
-    font-size: 11px !important;
-    letter-spacing: 0.14em !important;
-    margin-bottom: 7px !important;
-  }
-
-  /* ALL TOGETHER */
-  h1.hero-title {
-    margin-bottom: 12px !important;
-  }
-
-  h1.hero-title .glow {
-    font-size: 40px !important;
-    line-height: 1 !important;
-  }
-
-  /* DESCRIPTION */
-  .hero-sub {
-    max-width: 340px !important;
-    margin: 4px auto 10px !important;
-    font-size: 15px !important;
-    line-height: 1.45 !important;
-  }
-
-  /* WHATSAPP */
-  .hero-cta-row {
-    margin-top: 0 !important;
-  }
-
-  .hero-cta-row .btn {
-    width: 88% !important;
-    max-width: 370px !important;
-    min-height: 60px !important;
-    padding: 0 18px !important;
-    gap: 12px !important;
-    font-size: 17px !important;
-    border-radius: 50px !important;
-  }
-
-  .hero-cta-row .btn i:first-child {
-    font-size: 27px !important;
-  }
-
-  .hero-cta-row .btn i:last-child {
-    font-size: 12px !important;
-  }
-}  
-</style>
+  </style>
 </head>
 <body>
 <div class="grain"></div>
@@ -3238,7 +886,8 @@ nav.links a {
 <div class="hero" id="top">
 <div class="hero-bg"></div>
 <div class="wrap hero-inner">
-<div class="eyebrow">EVERY FRIDAY  ·  3KM FROM CENTRAL VANG VIENG</div>
+<div class="eyebrow">EVERY FRIDAY  ·  3KM FROM CENTRAL VANG VIENG</div>
+<p class="mobile-kicker">MUSIC &bull; PEOPLE &bull; NATURE</p>
 <h1 class="hero-title display"><span class="glow">All Together</span></h1>
 <p class="hero-sub">An open-air party under a canopy of old rain trees on the edge of town.</p>
 <div class="hero-cta-row">
