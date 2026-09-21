@@ -2990,6 +2990,70 @@ nav.links a {
     min-height: 62px !important;
   }
 }  
+/* ==============================
+   FINAL NAVIGATION TEXT BLOCK
+   MATCH REFERENCE
+============================== */
+
+@media (max-width: 768px) {
+
+  /* Keep the 5 columns compact */
+  .links {
+    width: 100% !important;
+    gap: 0 !important;
+  }
+
+  .links > a {
+    padding: 0 2px !important;
+    justify-content: flex-start !important;
+  }
+
+  /* Title directly below icon */
+  .links > a .nav-title {
+    margin-top: 8px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+  }
+
+  /* Subtitle */
+  .links > a .nav-sub {
+    margin-top: 7px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 400 !important;
+    line-height: 1.1 !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+  }
+
+  /* Small arrow below subtitle */
+  .links > a .nav-arrow {
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
+    min-height: 46px !important;
+    margin-top: 12px !important;
+    border: 2px solid #c6ff19 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .links > a .nav-arrow i {
+    font-size: 17px !important;
+    color: #c6ff19 !important;
+  }
+
+  /* Give the navigation a clean bottom boundary */
+  .links {
+    padding-bottom: 8px !important;
+  }
+}  
 </style>
 </head>
 <body>
