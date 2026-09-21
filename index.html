@@ -2807,6 +2807,66 @@ nav.links a {
     line-height: 0.95 !important;
     margin-bottom: 14px !important;
   }
+} 
+/* FINAL CLEANUP — REMOVE DUPLICATE TITLE */
+@media (max-width: 768px) {
+
+  /* Remove the old CSS-generated duplicate */
+  h1.hero-title::before,
+  h1.hero-title::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  /* Style the REAL All Together title */
+  h1.hero-title {
+    font-family: "Kaushan Script", "Brush Script MT", cursive !important;
+    font-size: 40px !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    max-width: 100% !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    margin: 0 auto 18px !important;
+  }
+
+  h1.hero-title .glow {
+    color: #c6ff19 !important;
+  }
+
+  /* Event bar — give all 3 sections enough room */
+  .facts-row {
+    width: 96% !important;
+    max-width: 360px !important;
+    height: 70px !important;
+    min-height: 70px !important;
+    padding: 4px 5px !important;
+    grid-template-columns: 1fr 1fr 1.25fr !important;
+    border-radius: 40px !important;
+  }
+
+  .facts-row > div {
+    height: 56px !important;
+    padding: 0 3px !important;
+  }
+
+  .facts-row > div:nth-child(1)::after {
+    font-size: 7.5px !important;
+  }
+
+  .facts-row > div:nth-child(2)::after {
+    font-size: 7.5px !important;
+  }
+
+  .facts-row > div:nth-child(3)::after {
+    font-size: 6px !important;
+    line-height: 1.15 !important;
+    white-space: pre !important;
+    width: auto !important;
+    max-width: none !important;
+  }
 }  
 </style>
 </head>
