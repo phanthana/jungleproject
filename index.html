@@ -3042,17 +3042,73 @@ nav.links a {
   }
 
   /* Location */
+/* FINAL EVENT BAR — MOBILE FIT */
+@media (max-width: 768px) {
+
+  .facts-row {
+    width: 94% !important;
+    max-width: 370px !important;
+    height: 74px !important;
+    min-height: 74px !important;
+    padding: 4px 3px !important;
+    display: grid !important;
+    grid-template-columns: 1.15fr 1.15fr 1.30fr !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+    border-radius: 40px !important;
+    overflow: hidden !important;
+  }
+
+  .facts-row > div {
+    height: 58px !important;
+    min-width: 0 !important;
+    padding: 0 2px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+  }
+
+  /* CALENDAR */
+  .facts-row > div:nth-child(1)::before {
+    font-size: 19px !important;
+    margin-right: 5px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .facts-row > div:nth-child(1)::after {
+    font-size: 7.5px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* CLOCK */
+  .facts-row > div:nth-child(2)::before {
+    font-size: 19px !important;
+    margin-right: 5px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .facts-row > div:nth-child(2)::after {
+    font-size: 7.5px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* LOCATION */
   .facts-row > div:nth-child(3)::before {
-    font-size: 25px !important;
-    margin-right: 7px !important;
+    font-size: 20px !important;
+    margin-right: 5px !important;
     flex-shrink: 0 !important;
   }
 
   .facts-row > div:nth-child(3)::after {
-    font-size: 8px !important;
-    line-height: 1.2 !important;
-    white-space: pre-line !important;
+    font-size: 6.5px !important;
+    line-height: 1.15 !important;
+    white-space: pre !important;
     text-align: left !important;
+    flex-shrink: 0 !important;
   }
 
   .facts-row > div:last-child {
