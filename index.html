@@ -1410,33 +1410,23 @@ nav.links a::after {
   margin-top: 25px !important;
 }
   }
-  /* ===== FINAL JUNGLE PROJECT MOBILE DESIGN ===== */
+/* =========================================================
+   FINAL MOBILE JUNGLE PROJECT DESIGN
+   Clean single navigation + hero layout
+   ========================================================= */
 
 @media (max-width: 768px) {
 
-  /* FULL SCREEN HERO */
-  .hero {
-    min-height: 100svh !important;
-    padding-top: 0 !important;
-    background: #06100b !important;
-  }
+  /* ---------- HEADER ---------- */
 
-  .hero-bg {
-    position: absolute !important;
-    inset: 0 !important;
-    background-position: center center !important;
-    background-size: cover !important;
-  }
-
-  /* HEADER OVER PHOTO */
   header {
     position: absolute !important;
     top: 0 !important;
     left: 0 !important;
     right: 0 !important;
     z-index: 50 !important;
+    padding: 12px 0 0 !important;
     background: transparent !important;
-    padding: 18px 0 0 !important;
     backdrop-filter: none !important;
   }
 
@@ -1445,7 +1435,7 @@ nav.links a::after {
     flex-direction: column !important;
     align-items: center !important;
     width: 100% !important;
-    padding: 0 8px !important;
+    padding: 0 4px !important;
     gap: 0 !important;
   }
 
@@ -1455,1033 +1445,341 @@ nav.links a::after {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    order: 1 !important;
   }
 
   .wordmark img {
-    height: 145px !important;
+    height: 125px !important;
     width: auto !important;
-    max-width: 330px !important;
-    object-fit: contain !important;
+    max-width: 290px !important;
     background: transparent !important;
+    padding: 0 !important;
+    box-shadow: none !important;
   }
 
-  /* HIDE TOP WHATSAPP BUTTON */
+  /* Hide top WhatsApp button */
   .nav-cta {
     display: none !important;
   }
 
-  /* FIVE NAVIGATION ITEMS */
+
+  /* ---------- FIVE NAVIGATION ITEMS ---------- */
+
   nav.links {
-    order: 2 !important;
     display: grid !important;
     grid-template-columns: repeat(5, 1fr) !important;
     width: 100% !important;
-    gap: 0 !important;
     margin: 8px 0 0 !important;
     padding: 0 !important;
-    border-top: 1px solid rgba(190,255,0,0.35) !important;
-    border-bottom: 1px solid rgba(190,255,0,0.35) !important;
+    gap: 0 !important;
+    border: none !important;
   }
 
-  nav.links a {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    width: 100% !important;
-    min-height: 105px !important;
-    padding: 10px 3px 8px !important;
-    border-right: 1px solid rgba(190,255,0,0.22) !important;
-    text-align: center !important;
-    text-decoration: none !important;
-    color: #ffffff !important;
-    font-size: 11px !important;
-    font-weight: 800 !important;
-    line-height: 1.15 !important;
-    white-space: normal !important;
-  }
-
-  nav.links a:last-child {
-    border-right: none !important;
-  }
-
-  /* NAV ICON */
-  nav.links a::before {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 52px !important;
-    height: 52px !important;
-    margin: 0 auto 8px !important;
-    border: 2px solid #c6ff19 !important;
-    border-radius: 50% !important;
-    color: #c6ff19 !important;
-    font-size: 25px !important;
-    font-weight: 400 !important;
-    box-sizing: border-box !important;
-  }
-
-  nav.links a:nth-child(1)::before {
-    content: "♫" !important;
-  }
-
-  nav.links a:nth-child(2)::before {
-    content: "i" !important;
-    font-family: Arial, sans-serif !important;
-    font-weight: 900 !important;
-  }
-
-  nav.links a:nth-child(3)::before {
-    content: "▣" !important;
-  }
-
-  nav.links a:nth-child(4)::before {
-    content: "▶" !important;
-    font-size: 20px !important;
-  }
-
-  nav.links a:nth-child(5)::before {
-    content: "⌖" !important;
-    font-size: 28px !important;
-  }
-
-  /* SMALL DESCRIPTION UNDER EACH NAV ITEM */
-  nav.links a::after {
-    display: block !important;
-    width: 100% !important;
-    height: 42px !important;
-    margin-top: 7px !important;
-    color: rgba(255,255,255,0.78) !important;
-    font-size: 8px !important;
-    font-weight: 600 !important;
-    line-height: 1.25 !important;
-    white-space: normal !important;
-  }
-
-  nav.links a:nth-child(1)::after {
-    content: "What to expect" !important;
-  }
-
-  nav.links a:nth-child(2)::after {
-    content: "Tips & info" !important;
-  }
-
-  nav.links a:nth-child(3)::after {
-    content: "Photos & vibes" !important;
-  }
-
-  nav.links a:nth-child(4)::after {
-    content: "Videos & reels" !important;
-  }
-
-  nav.links a:nth-child(5)::after {
-    content: "Maps & transport" !important;
-  }
-
-  /* HERO CONTENT */
-  .hero-inner {
+  nav.links > a {
     position: relative !important;
-    z-index: 10 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-height: 100svh !important;
-    padding: 500px 18px 35px !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: flex-start !important;
-    box-sizing: border-box !important;
-  }
-
-  /* REMOVE OLD EYEBROW */
-  .eyebrow {
-    display: none !important;
-  }
-
-  /* EVENT INFORMATION */
-  .facts-row {
-    order: 1 !important;
     width: 100% !important;
-    max-width: 700px !important;
-    min-height: 64px !important;
-    margin: 0 auto 25px !important;
-    padding: 8px 12px !important;
-    display: grid !important;
-    grid-template-columns: 1fr 1fr 1fr !important;
-    align-items: center !important;
-    border: 2px solid #c6ff19 !important;
-    border-radius: 40px !important;
-    background: rgba(5,10,8,0.62) !important;
+    min-width: 0 !important;
+    height: 185px !important;
+    padding: 0 3px !important;
+    margin: 0 !important;
+    border: none !important;
+    border-right: 1px solid rgba(198,255,25,0.55) !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    text-align: center !important;
     box-sizing: border-box !important;
   }
 
-  .facts-row > div {
-    text-align: center !important;
-    border-right: 1px solid rgba(198,255,25,0.55) !important;
-    padding: 0 5px !important;
-  }
-
-  .facts-row > div:last-child {
+  nav.links > a:last-child {
     border-right: none !important;
   }
 
-  .fact-label {
-    color: #c6ff19 !important;
-    font-size: 8px !important;
-    font-weight: 800 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.08em !important;
-    margin-bottom: 3px !important;
-  }
 
-  .fact-value {
-    color: #ffffff !important;
-    font-size: 10px !important;
-    font-weight: 800 !important;
-    line-height: 1.15 !important;
-  }
+  /* GREEN ICON CIRCLE */
 
-  /* MUSIC PEOPLE NATURE */
-  .hero-title::before {
-    content: "MUSIC  •  PEOPLE  •  NATURE" !important;
-    display: block !important;
-    margin-bottom: 10px !important;
-    color: #ffffff !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 13px !important;
-    font-weight: 800 !important;
-    letter-spacing: 0.12em !important;
-    line-height: 1.2 !important;
-    white-space: nowrap !important;
-  }
-
-  /* All Together */
-  h1.hero-title {
-    order: 2 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    max-width: 100% !important;
-    color: #c6ff19 !important;
-    font-family: "Brush Script MT", "Segoe Script", cursive !important;
-    font-size: clamp(58px, 17vw, 82px) !important;
-    font-weight: 500 !important;
-    line-height: 0.88 !important;
-    letter-spacing: -0.03em !important;
-    text-align: center !important;
-    text-transform: none !important;
-  }
-
-  /* REPLACE OLD TITLE TEXT VISUALLY */
-  h1.hero-title {
-    font-size: 0 !important;
-  }
-
-  h1.hero-title::before {
-    font-size: 13px !important;
-  }
-
-  h1.hero-title::after {
-    content: "All Together" !important;
-    display: block !important;
-    margin-top: 5px !important;
-    color: #c6ff19 !important;
-    font-family: "Brush Script MT", "Segoe Script", cursive !important;
-    font-size: clamp(58px, 17vw, 82px) !important;
-    font-weight: 500 !important;
-    line-height: 0.88 !important;
-  }
-
-  /* DESCRIPTION */
-  .hero-sub {
-    order: 3 !important;
-    max-width: 620px !important;
-    margin: 22px auto 20px !important;
-    color: #ffffff !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 16px !important;
-    line-height: 1.4 !important;
-    text-align: center !important;
-  }
-
-  .hero-sub strong {
-    color: #ffffff !important;
-  }
-
-  /* WHATSAPP BUTTON */
-  .hero-cta-row {
-    order: 4 !important;
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    margin: 0 !important;
-  }
-
-  .hero-cta-row .btn {
-    width: 82% !important;
-    max-width: 520px !important;
+  nav.links .nav-icon {
+    width: 62px !important;
+    height: 62px !important;
+    min-width: 62px !important;
     min-height: 62px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    border-radius: 40px !important;
-    border: 2px solid #c6ff19 !important;
-    background: #c6ff19 !important;
-    color: #07100b !important;
+    margin: 0 auto 8px !important;
+    padding: 0 !important;
+    border: 3px solid #c6ff19 !important;
+    border-radius: 50% !important;
+    color: #c6ff19 !important;
+    background: transparent !important;
+    box-sizing: border-box !important;
+  }
+
+  nav.links .nav-icon i {
+    font-size: 26px !important;
+    color: #c6ff19 !important;
+    line-height: 1 !important;
+  }
+
+
+  /* NAVIGATION TITLE */
+
+  nav.links .nav-title {
+    display: block !important;
+    width: 100% !important;
+    min-height: 22px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #ffffff !important;
     font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 17px !important;
-    font-weight: 900 !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    line-height: 1.15 !important;
     text-align: center !important;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.35) !important;
+    white-space: normal !important;
+  }
+
+
+  /* NAVIGATION SUBTITLE */
+
+  nav.links .nav-sub {
+    display: block !important;
+    width: 100% !important;
+    margin: 4px 0 0 !important;
+    padding: 0 !important;
+    color: rgba(255,255,255,0.82) !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 8px !important;
+    font-weight: 400 !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+
+
+  /* SMALL ARROW */
+
+  nav.links .nav-arrow {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 25px !important;
+    height: 25px !important;
+    min-width: 25px !important;
+    min-height: 25px !important;
+    margin: 7px auto 0 !important;
+    padding: 0 !important;
+    border: 1.5px solid #c6ff19 !important;
+    border-radius: 50% !important;
+    box-sizing: border-box !important;
+    color: #c6ff19 !important;
+  }
+
+  nav.links .nav-arrow i {
+    font-size: 10px !important;
+    color: #c6ff19 !important;
+    line-height: 1 !important;
+  }
+
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    min-height: 100svh !important;
+    height: 100svh !important;
+    padding-top: 0 !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: flex-start !important;
+  }
+
+  .hero-bg {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+
+  .hero-inner {
+    position: relative !important;
+    z-index: 10 !important;
+    width: 100% !important;
+    min-height: 100svh !important;
+    padding: 395px 16px 30px !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+
+  /* Hide old eyebrow */
+
+  .eyebrow {
+    display: none !important;
+  }
+
+
+  /* ---------- EVENT INFORMATION BAR ---------- */
+
+  .facts-row {
+    order: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 355px !important;
+    min-height: 58px !important;
+    margin: 0 auto 14px !important;
+    padding: 8px 12px !important;
+    border: 2px solid #c6ff19 !important;
+    border-radius: 35px !important;
+    background: rgba(5,10,8,0.58) !important;
+    box-sizing: border-box !important;
+  }
+
+  .facts-row > div {
+    display: none !important;
+  }
+
+  .facts-row::before {
+    content: "EVERY FRIDAY  |  10 PM - 4 AM  |  JUST 3 KM FROM CENTRAL VANG VIENG" !important;
+    display: block !important;
+    width: 100% !important;
+    color: #ffffff !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 8.5px !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    letter-spacing: 0.02em !important;
+    text-align: center !important;
+  }
+
+
+  /* ---------- MUSIC / PEOPLE / NATURE ---------- */
+
+  h1.hero-title {
+    order: 2 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 0 !important;
+    line-height: 1 !important;
+    text-align: center !important;
+    color: #c6ff19 !important;
+  }
+
+  h1.hero-title::before {
+    content: "MUSIC  •  PEOPLE  •  NATURE" !important;
+    display: block !important;
+    margin: 0 0 5px !important;
+    color: #ffffff !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.10em !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+  }
+
+
+  /* ---------- ALL TOGETHER ---------- */
+
+  h1.hero-title::after {
+    content: "All Together" !important;
+    display: block !important;
+    color: #c6ff19 !important;
+    font-family: "Kaushan Script", "Brush Script MT", cursive !important;
+    font-size: 48px !important;
+    font-weight: 400 !important;
+    line-height: 0.95 !important;
+    letter-spacing: 0 !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    text-shadow: 0 3px 12px rgba(0,0,0,0.55) !important;
+  }
+
+
+  /* ---------- DESCRIPTION ---------- */
+
+  .hero-sub {
+    order: 3 !important;
+    width: 100% !important;
+    max-width: 350px !important;
+    margin: 18px auto 18px !important;
+    padding: 0 !important;
+    color: #ffffff !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+  }
+
+
+  /* ---------- WHATSAPP ---------- */
+
+  .hero-cta-row {
+    order: 4 !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .hero-cta-row .text-link {
     display: none !important;
   }
 
-  /* DARKER LOWER PHOTO */
-  .hero-bg::after {
-    background: linear-gradient(
-      to bottom,
-      rgba(0,0,0,0.05) 15%,
-      rgba(0,0,0,0.12) 45%,
-      rgba(0,0,0,0.72) 100%
-    ) !important;
-  }
-
-}
-/* =========================================================
-   FINAL JUNGLE PROJECT NAVIGATION
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-  nav.links {
-    display: grid !important;
-    grid-template-columns: repeat(5, 1fr) !important;
-    width: 100% !important;
-    gap: 0 !important;
-    margin: 8px 0 0 !important;
-    padding: 0 !important;
-    border: none !important;
-  }
-
-  nav.links a {
-    position: relative !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    width: 100% !important;
-    min-width: 0 !important;
-    min-height: 105px !important;
-    padding: 0 2px 4px !important;
-    color: #ffffff !important;
-    text-decoration: none !important;
-    text-align: center !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    border-right: 1px solid rgba(198,255,25,0.20) !important;
-  }
-
-  nav.links a:last-child {
-    border-right: none !important;
-  }
-
-  nav.links a::before,
-  nav.links a::after {
-    content: none !important;
-    display: none !important;
-  }
-
-  .nav-icon {
-    width: 52px !important;
-    height: 52px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin: 0 auto 7px !important;
-    border: 2px solid #c6ff19 !important;
-    border-radius: 50% !important;
-    color: #c6ff19 !important;
-    font-size: 24px !important;
-    line-height: 1 !important;
-    flex-shrink: 0 !important;
-  }
-
-  .nav-icon i {
-    font-size: 24px !important;
-  }
-
-  nav.links a:nth-child(4) .nav-icon i {
-    font-size: 21px !important;
-    margin-left: 2px !important;
-  }
-
-  nav.links a:nth-child(5) .nav-icon i {
-    font-size: 25px !important;
-  }
-
-  .nav-title {
-    display: block !important;
-    width: 100% !important;
-    color: #ffffff !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 11px !important;
-    font-weight: 800 !important;
-    line-height: 1.15 !important;
-    white-space: normal !important;
-  }
-
-  .nav-sub {
-    display: block !important;
-    width: 100% !important;
-    margin-top: 5px !important;
-    color: rgba(255,255,255,0.78) !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 8px !important;
-    font-weight: 600 !important;
-    line-height: 1.2 !important;
-  }
-
-  .nav-arrow {
-    width: 40px !important;
-    height: 40px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin: 7px auto 0 !important;
-    border: 2px solid #c6ff19 !important;
-    border-radius: 50% !important;
-    color: #c6ff19 !important;
-    font-size: 16px !important;
-    line-height: 1 !important;
-    flex-shrink: 0 !important;
-  }
-
-  .nav-arrow i {
-    font-size: 14px !important;
-  }
-
-  nav.links a:hover .nav-icon,
-  nav.links a:hover .nav-arrow {
-    background: #c6ff19 !important;
-    color: #07100b !important;
-  }
-
-}
-/* FINAL ALL TOGETHER - REFERENCE STYLE */
-
-@media (max-width: 768px) {
-
-  h1.hero-title::after {
-    content: "All Together" !important;
-    font-family: "Kaushan Script", cursive !important;
-    font-size: 46px !important;
-    font-weight: 400 !important;
-    line-height: 1 !important;
-    letter-spacing: 0 !important;
-    text-transform: none !important;
-    white-space: nowrap !important;
-
-    color: #c6ff19 !important;
-    text-align: center !important;
-
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-
-    margin: 0 auto 18px !important;
-    padding: 0 0 7px !important;
-    box-sizing: border-box !important;
-
-    text-decoration: underline !important;
-    text-decoration-color: #c6ff19 !important;
-    text-decoration-thickness: 2px !important;
-    text-underline-offset: 7px !important;
-
-    text-shadow: 0 3px 15px rgba(0,0,0,0.45) !important;
-  }
-
-}
-@media (max-width: 768px) {
-
-  .hero-cta-row .btn {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 16px !important;
-  }
-
-  .hero-cta-row .btn .fa-whatsapp {
-    font-size: 30px !important;
-    flex-shrink: 0 !important;
-  }
-
-  .hero-cta-row .btn .fa-chevron-right {
-    font-size: 18px !important;
-    margin-left: auto !important;
-    flex-shrink: 0 !important;
-  }
-
-}
-@media (max-width: 768px) {
-
-  .scroll-indicator {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin-top: 38px !important;
-    color: #ffffff !important;
-  }
-
-  .scroll-mouse {
-    width: 30px !important;
-    height: 48px !important;
-    border: 2px solid #ffffff !important;
-    border-radius: 18px !important;
-    position: relative !important;
-  }
-
-  .scroll-mouse::before {
-    content: "" !important;
-    position: absolute !important;
-    top: 8px !important;
-    left: 50% !important;
-    width: 4px !important;
-    height: 9px !important;
-    transform: translateX(-50%) !important;
-    background: #ffffff !important;
-    border-radius: 5px !important;
-  }
-
-  .scroll-chevron {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    margin-top: 4px !important;
-    line-height: 8px !important;
-  }
-
-  .scroll-chevron i {
-    display: block !important;
-    font-size: 16px !important;
-    line-height: 8px !important;
-  }
-
-  .scroll-text {
-    margin-top: 17px !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 9px !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.28em !important;
-    color: #ffffff !important;
-  }
-
-} 
-    /* ===== FINAL MOBILE CLEAN LAYOUT ===== */
-
-@media (max-width: 768px) {
-
-  /* Smaller logo */
-  .wordmark img {
-    height: 118px !important;
-    max-width: 285px !important;
-  }
-
-  /* Navigation row */
-  nav.links {
-    margin-top: 2px !important;
-    width: 100% !important;
-  }
-
-  nav.links a {
-    min-height: 82px !important;
-    padding: 0 1px 3px !important;
-  }
-
-  /* Smaller green icon circles */
-  .nav-icon {
-    width: 36px !important;
-    height: 36px !important;
-    margin: 0 auto 4px !important;
-    border-width: 2px !important;
-  }
-
-  .nav-icon i {
-    font-size: 17px !important;
-  }
-
-  nav.links a:nth-child(4) .nav-icon i {
-    font-size: 16px !important;
-  }
-
-  nav.links a:nth-child(5) .nav-icon i {
-    font-size: 18px !important;
-  }
-
-  /* Navigation titles */
-  .nav-title {
-    font-size: 10px !important;
-    line-height: 1.12 !important;
-  }
-
-  /* Navigation subtitles */
-  .nav-sub {
-    margin-top: 3px !important;
-    font-size: 7px !important;
-    line-height: 1.15 !important;
-  }
-
-  /* Small arrow circles */
-  .nav-arrow {
-    width: 24px !important;
-    height: 24px !important;
-    margin: 4px auto 0 !important;
-    border-width: 1.5px !important;
-  }
-
-  .nav-arrow i {
-    font-size: 10px !important;
-  }
-
-  /* Move hero content upward */
-  .hero-inner {
-    padding: 405px 14px 28px !important;
-  }
-
-  /* Event information bar */
-  .facts-row {
-    width: 100% !important;
-    max-width: 350px !important;
-    min-height: 0 !important;
-    margin: 0 auto 16px !important;
-    padding: 9px 10px !important;
-    border-width: 2px !important;
-  }
-
-  .facts-row::before {
-    font-size: 9px !important;
-    line-height: 1.3 !important;
-  }
-
-  /* Music / People / Nature */
-  h1.hero-title::before {
-    font-size: 10px !important;
-    margin-bottom: 4px !important;
-    letter-spacing: 0.10em !important;
-  }
-
-  /* All Together */
-  h1.hero-title::after {
-    font-size: clamp(48px, 14vw, 64px) !important;
-    line-height: 0.95 !important;
-  }
-
-  /* Description */
-  .hero-sub {
-    max-width: 330px !important;
-    margin: 14px auto 16px !important;
-  }
-
-  .hero-sub::before {
-    font-size: 14px !important;
-    line-height: 1.4 !important;
-  }
-
-  /* WhatsApp button */
-  .hero-cta-row .btn {
-    width: 88% !important;
-    min-height: 58px !important;
-    font-size: 17px !important;
-  }
-
-  /* Hide scroll indicator here - it was causing overlap */
-  .scroll-indicator {
-    display: none !important;
-  }
-
-}
-/* FINAL WHATSAPP BUTTON - CLEAN */
-
-@media (max-width: 768px) {
-
   .hero-cta-row .btn {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     gap: 12px !important;
-    width: 88% !important;
+    width: 90% !important;
+    max-width: 360px !important;
     min-height: 58px !important;
-    padding: 0 20px !important;
+    padding: 0 18px !important;
+    border: 2px solid #c6ff19 !important;
+    border-radius: 40px !important;
+    background: #c6ff19 !important;
+    color: #07100b !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 17px !important;
+    font-weight: 900 !important;
     box-sizing: border-box !important;
-    overflow: hidden !important;
   }
 
   .hero-cta-row .btn .fa-whatsapp {
     display: inline-block !important;
-    position: static !important;
-    transform: none !important;
-    margin: 0 !important;
     font-size: 28px !important;
     line-height: 1 !important;
-    flex: 0 0 auto !important;
-  }
-
-  .hero-cta-row .btn span {
-    display: inline-block !important;
-    width: auto !important;
-    text-align: center !important;
-    white-space: nowrap !important;
-    font-size: 17px !important;
-    line-height: 1.2 !important;
-    flex: 0 0 auto !important;
   }
 
   .hero-cta-row .btn .fa-chevron-right {
+    display: inline-block !important;
+    font-size: 15px !important;
+    margin-left: 4px !important;
+  }
+
+
+  /* ---------- SCROLL INDICATOR ---------- */
+
+  .scroll-indicator {
     display: none !important;
   }
 
-}
-    /* FINAL NAVIGATION POLISH */
-
-@media (max-width: 768px) {
-
-  nav.links {
-    width: 100% !important;
-    margin: 0 auto !important;
-    padding: 0 2px !important;
-  }
-
-  nav.links a {
-    min-height: 82px !important;
-    padding: 0 2px 2px !important;
-    gap: 0 !important;
-  }
-
-  /* Main green icon */
-  nav.links .nav-icon {
-    width: 38px !important;
-    height: 38px !important;
-    min-width: 38px !important;
-    border-width: 2px !important;
-    margin: 0 auto 5px !important;
-  }
-
-  nav.links .nav-icon i {
-    font-size: 17px !important;
-  }
-
-  /* Navigation title */
-  nav.links .nav-title {
-    display: block !important;
-    font-size: 10.5px !important;
-    font-weight: 700 !important;
-    line-height: 1.15 !important;
-    text-align: center !important;
-    white-space: normal !important;
-  }
-
-  /* Small description */
-  nav.links .nav-sub {
-    display: block !important;
-    margin-top: 4px !important;
-    font-size: 7.5px !important;
-    font-weight: 400 !important;
-    line-height: 1.15 !important;
-    text-align: center !important;
-    white-space: normal !important;
-    opacity: 0.85 !important;
-  }
-
-  /* Small arrow button */
-  nav.links .nav-arrow {
-    width: 23px !important;
-    height: 23px !important;
-    min-width: 23px !important;
-    margin: 5px auto 0 !important;
-    border-width: 1.5px !important;
-  }
-
-  nav.links .nav-arrow i {
-    font-size: 9px !important;
-  }
-
-}
-   /* FINAL NAVIGATION ARROW POSITION */
-
-@media (max-width: 768px) {
-
-  .nav-links .nav-arrow {
-    transform: translateY(-10px) !important;
-  }
-
 } 
-
-/* FINAL MOBILE JUNGLE NAV - REFERENCE MATCH */
-
-@media (max-width: 768px) {
-
-  .nav-links {
-    display: grid !important;
-    grid-template-columns: repeat(5, 1fr) !important;
-    width: 100% !important;
-    margin: 18px 0 0 !important;
-    padding: 0 4px !important;
-    gap: 0 !important;
-    align-items: stretch !important;
-  }
-
-  .nav-links > a {
-    position: relative !important;
-    width: 100% !important;
-    height: 205px !important;
-    min-width: 0 !important;
-
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-
-    padding: 0 3px !important;
-    margin: 0 !important;
-
-    box-sizing: border-box !important;
-  }
-
-  /* Vertical separator */
-  .nav-links > a:not(:first-child)::before {
-    content: "" !important;
-    position: absolute !important;
-    left: 0 !important;
-    top: 0 !important;
-    width: 1px !important;
-    height: 205px !important;
-    background: rgba(198,255,25,0.55) !important;
-  }
-
-  /* Main icon */
-  .nav-links .nav-icon {
-    width: 70px !important;
-    height: 70px !important;
-    min-width: 70px !important;
-    min-height: 70px !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    border: 3px solid #c6ff19 !important;
-    border-radius: 50% !important;
-
-    margin: 0 auto 9px !important;
-    padding: 0 !important;
-
-    box-sizing: border-box !important;
-  }
-
-  .nav-links .nav-icon i {
-    font-size: 29px !important;
-    color: #c6ff19 !important;
-    line-height: 1 !important;
-  }
-
-  /* First line under icon */
-  .nav-links .nav-title {
-    display: block !important;
-    width: 100% !important;
-
-    color: #ffffff !important;
-
-    font-size: 15px !important;
-    font-weight: 700 !important;
-    line-height: 1.15 !important;
-
-    text-align: center !important;
-    white-space: normal !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  /* Second line under title */
-  .nav-links .nav-sub {
-    display: block !important;
-    width: 100% !important;
-
-    color: rgba(255,255,255,0.82) !important;
-
-    font-size: 11px !important;
-    font-weight: 400 !important;
-    line-height: 1.2 !important;
-
-    text-align: center !important;
-    white-space: normal !important;
-
-    margin: 6px 0 0 !important;
-    padding: 0 !important;
-  }
-
-  /* Small arrow */
-  .nav-links .nav-arrow {
-    width: 42px !important;
-    height: 42px !important;
-    min-width: 42px !important;
-    min-height: 42px !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    border: 2px solid #c6ff19 !important;
-    border-radius: 50% !important;
-
-    margin: 12px auto 0 !important;
-    padding: 0 !important;
-
-    box-sizing: border-box !important;
-  }
-
-  .nav-links .nav-arrow i {
-    font-size: 15px !important;
-    color: #c6ff19 !important;
-    transform: none !important;
-    line-height: 1 !important;
-  }
-
-}    
-/* FINAL MOBILE NAVIGATION - JUNGLE PROJECT */
-
-@media (max-width: 768px) {
-
-  /* Navigation block */
-  nav.links {
-    display: grid !important;
-    grid-template-columns: repeat(5, 1fr) !important;
-    width: 100% !important;
-    margin: 8px 0 0 !important;
-    padding: 0 !important;
-    gap: 0 !important;
-    align-items: stretch !important;
-  }
-
-  /* Each navigation column */
-  nav.links > a {
-    position: relative !important;
-    width: 100% !important;
-    min-width: 0 !important;
-    height: 245px !important;
-    margin: 0 !important;
-    padding: 0 4px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    text-align: center !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Vertical line between columns */
-  nav.links > a:not(:last-child) {
-    border-right: 1px solid rgba(198,255,25,0.65) !important;
-  }
-
-  /* ICON */
-  nav.links .nav-icon {
-    width: 74px !important;
-    height: 74px !important;
-    min-width: 74px !important;
-    min-height: 74px !important;
-    margin: 0 auto 12px !important;
-    border: 3px solid #c6ff19 !important;
-    border-radius: 50% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    box-sizing: border-box !important;
-    color: #c6ff19 !important;
-  }
-
-  nav.links .nav-icon i {
-    font-size: 31px !important;
-    line-height: 1 !important;
-    color: #c6ff19 !important;
-  }
-
-  /* TITLE - exactly one line where possible */
-  nav.links .nav-title {
-    width: 100% !important;
-    min-height: 24px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    font-size: 17px !important;
-    line-height: 1.15 !important;
-    font-weight: 700 !important;
-    color: #ffffff !important;
-    text-align: center !important;
-  }
-
-  /* SUBTITLE - second line */
-  nav.links .nav-sub {
-    width: 100% !important;
-    min-height: 38px !important;
-    margin: 8px 0 0 !important;
-    padding: 0 !important;
-    font-size: 13px !important;
-    line-height: 1.25 !important;
-    font-weight: 400 !important;
-    color: rgba(255,255,255,0.78) !important;
-    text-align: center !important;
-  }
-
-  /* SMALL ARROW - same position for every column */
-  nav.links .nav-arrow {
-    position: absolute !important;
-    top: 188px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-
-    width: 48px !important;
-    height: 48px !important;
-    min-width: 48px !important;
-    min-height: 48px !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-
-    border: 2px solid #c6ff19 !important;
-    border-radius: 50% !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    box-sizing: border-box !important;
-    color: #c6ff19 !important;
-  }
-
-  nav.links .nav-arrow i {
-    font-size: 17px !important;
-    line-height: 1 !important;
-    color: #c6ff19 !important;
-    transform: none !important;
-  }
-
-  /* EVENT INFORMATION BLOCK */
-  .event-bar {
-    width: calc(100% - 64px) !important;
-    margin: 4px auto 0 !important;
-    min-height: 82px !important;
-    padding: 12px 18px !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Keep the hero content below the navigation */
-  .hero-content {
-    padding-top: 0 !important;
-  }
-
-}    
 </style>
 </head>
 <body>
