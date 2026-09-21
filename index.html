@@ -2640,6 +2640,124 @@ nav.links a {
     font-size: 17px !important;
   }
 
+}
+/* =========================================================
+   FINAL REFERENCE MATCH — MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* NAVIGATION — one line title + one line subtitle */
+  nav.links .nav-title {
+    width: 100% !important;
+    max-width: none !important;
+    font-size: 8.5px !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.25px !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+  }
+
+  nav.links .nav-sub {
+    width: 100% !important;
+    max-width: none !important;
+    font-size: 6.5px !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.1px !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+  }
+
+
+  /* EVENT BAR — balanced 3 columns */
+  .facts-row {
+    width: 96% !important;
+    max-width: 355px !important;
+    height: 72px !important;
+    min-height: 72px !important;
+
+    padding: 5px 6px !important;
+
+    grid-template-columns: 1fr 1fr 1.35fr !important;
+
+    border-radius: 40px !important;
+    overflow: hidden !important;
+  }
+
+  .facts-row > div {
+    height: 58px !important;
+    min-width: 0 !important;
+    padding: 0 4px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    overflow: hidden !important;
+  }
+
+  /* Calendar */
+  .facts-row > div:nth-child(1)::before {
+    font-size: 20px !important;
+    margin-right: 5px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .facts-row > div:nth-child(1)::after {
+    font-size: 8px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Clock */
+  .facts-row > div:nth-child(2)::before {
+    font-size: 20px !important;
+    margin-right: 5px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .facts-row > div:nth-child(2)::after {
+    font-size: 8px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Location */
+  .facts-row > div:nth-child(3)::before {
+    font-size: 21px !important;
+    margin-right: 5px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .facts-row > div:nth-child(3)::after {
+    font-size: 6.5px !important;
+    line-height: 1.2 !important;
+    white-space: pre !important;
+    width: auto !important;
+    max-width: none !important;
+    flex-shrink: 1 !important;
+    text-align: left !important;
+  }
+
+
+  /* ALL TOGETHER */
+  h1.hero-title {
+    font-family: "Kaushan Script", "Brush Script MT", cursive !important;
+    font-size: 48px !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    max-width: none !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    margin: 0 auto 20px !important;
+  }
+
+  h1.hero-title .glow {
+    color: #c6ff19 !important;
+    text-shadow: 0 3px 15px rgba(0,0,0,0.55) !important;
+  }
 }  
 </style>
 </head>
@@ -2695,7 +2813,7 @@ nav.links a {
 <div class="hero-bg"></div>
 <div class="wrap hero-inner">
 <div class="eyebrow">EVERY FRIDAY  ·  3KM FROM CENTRAL VANG VIENG</div>
-<h1 class="hero-title display">The night takes over <span class="glow">the trees.</span></h1>
+<h1 class="hero-title display"><span class="glow">All Together</span></h1>
 <p class="hero-sub">An open-air party under a canopy of old rain trees on the edge of town — <strong>live DJs, fire performance, body art</strong>, and a crowd that doesn’t sit down until sunrise.</p>
 <div class="hero-cta-row">
 <a class="btn" href="https://wa.me/8562055615282" rel="noopener" target="_blank">
