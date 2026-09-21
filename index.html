@@ -2350,6 +2350,138 @@ nav.links a::after {
   }
 
 }    
+/* FINAL MOBILE NAVIGATION - JUNGLE PROJECT */
+
+@media (max-width: 768px) {
+
+  /* Navigation block */
+  nav.links {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    width: 100% !important;
+    margin: 8px 0 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    align-items: stretch !important;
+  }
+
+  /* Each navigation column */
+  nav.links > a {
+    position: relative !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 245px !important;
+    margin: 0 !important;
+    padding: 0 4px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Vertical line between columns */
+  nav.links > a:not(:last-child) {
+    border-right: 1px solid rgba(198,255,25,0.65) !important;
+  }
+
+  /* ICON */
+  nav.links .nav-icon {
+    width: 74px !important;
+    height: 74px !important;
+    min-width: 74px !important;
+    min-height: 74px !important;
+    margin: 0 auto 12px !important;
+    border: 3px solid #c6ff19 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    color: #c6ff19 !important;
+  }
+
+  nav.links .nav-icon i {
+    font-size: 31px !important;
+    line-height: 1 !important;
+    color: #c6ff19 !important;
+  }
+
+  /* TITLE - exactly one line where possible */
+  nav.links .nav-title {
+    width: 100% !important;
+    min-height: 24px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 17px !important;
+    line-height: 1.15 !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    text-align: center !important;
+  }
+
+  /* SUBTITLE - second line */
+  nav.links .nav-sub {
+    width: 100% !important;
+    min-height: 38px !important;
+    margin: 8px 0 0 !important;
+    padding: 0 !important;
+    font-size: 13px !important;
+    line-height: 1.25 !important;
+    font-weight: 400 !important;
+    color: rgba(255,255,255,0.78) !important;
+    text-align: center !important;
+  }
+
+  /* SMALL ARROW - same position for every column */
+  nav.links .nav-arrow {
+    position: absolute !important;
+    top: 188px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: 2px solid #c6ff19 !important;
+    border-radius: 50% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    box-sizing: border-box !important;
+    color: #c6ff19 !important;
+  }
+
+  nav.links .nav-arrow i {
+    font-size: 17px !important;
+    line-height: 1 !important;
+    color: #c6ff19 !important;
+    transform: none !important;
+  }
+
+  /* EVENT INFORMATION BLOCK */
+  .event-bar {
+    width: calc(100% - 64px) !important;
+    margin: 4px auto 0 !important;
+    min-height: 82px !important;
+    padding: 12px 18px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Keep the hero content below the navigation */
+  .hero-content {
+    padding-top: 0 !important;
+  }
+
+}    
 </style>
 </head>
 <body>
