@@ -3053,6 +3053,60 @@ nav.links a {
   .links {
     padding-bottom: 8px !important;
   }
+}
+/* ==============================
+   EVENT BAR — FINAL FIT
+============================== */
+
+@media (max-width: 768px) {
+
+  .facts-row {
+    grid-template-columns: 1fr 1fr 1.25fr !important;
+    width: 92% !important;
+    height: 86px !important;
+    padding: 5px 4px !important;
+  }
+
+  .facts-row > div {
+    height: 64px !important;
+    padding: 0 3px !important;
+    gap: 0 !important;
+  }
+
+  /* Calendar */
+  .facts-row > div:nth-child(1)::before {
+    font-size: 25px !important;
+    margin-right: 7px !important;
+  }
+
+  .facts-row > div:nth-child(1)::after {
+    font-size: 10px !important;
+    white-space: nowrap !important;
+  }
+
+  /* Clock */
+  .facts-row > div:nth-child(2)::before {
+    font-size: 25px !important;
+    margin-right: 7px !important;
+  }
+
+  .facts-row > div:nth-child(2)::after {
+    font-size: 10px !important;
+    white-space: nowrap !important;
+  }
+
+  /* Location */
+  .facts-row > div:nth-child(3)::before {
+    font-size: 25px !important;
+    margin-right: 7px !important;
+  }
+
+  .facts-row > div:nth-child(3)::after {
+    font-size: 8px !important;
+    line-height: 1.25 !important;
+    white-space: pre !important;
+    text-align: left !important;
+  }
 }  
 </style>
 </head>
