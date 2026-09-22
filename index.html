@@ -699,7 +699,7 @@
     .facts-row {
       order: 1;
       display: grid;
-      grid-template-columns: 1.05fr 1fr 1.25fr;
+      grid-template-columns: 1.05fr 1fr 1.35fr;
       align-items: center;
       width: 96%;
       max-width: 390px;
@@ -715,11 +715,10 @@
 
     .facts-row > div {
       display: flex;
-      flex-direction: row;
       align-items: center;
       justify-content: center;
       height: 32px;
-      padding: 0 4px;
+      padding: 0 5px;
       border-right: 1px solid #c6ff19;
       box-sizing: border-box;
       min-width: 0;
@@ -742,12 +741,23 @@
       font-weight: 900;
       color: #c6ff19;
       flex-shrink: 0;
-      margin-right: 4px;
+      margin-right: 5px;
     }
 
-    .facts-row > div:nth-child(1)::before { content: "\f073"; font-size: 11px; }
-    .facts-row > div:nth-child(2)::before { content: "\f017"; font-size: 11px; }
-    .facts-row > div:nth-child(3)::before { content: "\f3c5"; font-size: 12px; }
+    .facts-row > div:nth-child(1)::before {
+      content: "\f073";
+      font-size: 11px;
+    }
+
+    .facts-row > div:nth-child(2)::before {
+      content: "\f017";
+      font-size: 11px;
+    }
+
+    .facts-row > div:nth-child(3)::before {
+      content: "\f3c5";
+      font-size: 12px;
+    }
 
     .facts-row > div:nth-child(1)::after,
     .facts-row > div:nth-child(2)::after {
@@ -756,6 +766,7 @@
       font-size: 6.8px;
       font-weight: 900;
       white-space: nowrap;
+      line-height: 1.15;
     }
 
     .facts-row > div:nth-child(1)::after {
@@ -772,17 +783,17 @@
       font-family: Arial, Helvetica, sans-serif;
       font-size: 6.3px;
       font-weight: 900;
-      line-height: 1.25;
+      line-height: 1.15;
       white-space: pre;
-      text-align: center;
+      text-align: left;
     }
 
-    /* ---- "All Together" title ---- */
+/* ---- "All Together" title ---- */
     h1.hero-title {
       order: 2;
       position: relative;
       font-family: "Kaushan Script", "Brush Script MT", cursive;
-      font-size: 44px;
+      font-size: 22px;
       font-weight: 400;
       line-height: 1;
       letter-spacing: 0;
@@ -799,8 +810,8 @@
     h1.hero-title::after {
       content: "";
       display: block;
-      width: 190px;
-      height: 16px;
+      width: 95px;
+      height: 8px;
       margin: 2px auto 0;
       background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 24'%3E%3Cpath d='M4 14 C 60 24, 140 4, 216 12' stroke='%23c6ff19' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / contain;
     }
