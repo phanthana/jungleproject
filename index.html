@@ -699,11 +699,11 @@
     .facts-row {
       order: 1;
       display: grid;
-      grid-template-columns: 0.85fr 0.95fr 1.55fr;
+      grid-template-columns: 1fr 1fr 1.55fr;
       align-items: center;
-      width: 94%;
-      max-width: 370px;
-      min-height: 42px;
+      width: 96%;
+      max-width: 390px;
+      min-height: 46px;
       margin: 0 auto 12px;
       padding: 2px 6px;
       border: 1px solid #c6ff19;
@@ -712,16 +712,18 @@
       box-sizing: border-box;
       overflow: hidden;
     }
+
     .facts-row > div {
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 30px;
+      height: 32px;
       padding: 0 4px;
       border-right: 1px solid #c6ff19;
       box-sizing: border-box;
       min-width: 0;
     }
+
     .facts-row > div:last-child { border-right: none; }
     .facts-row .fact-label,
     .facts-row .fact-value { display: none; }
@@ -735,6 +737,7 @@
       flex-shrink: 0;
       margin-right: 4px;
     }
+
     .facts-row > div:nth-child(1)::before { content: "\f073"; font-size: 11px; }
     .facts-row > div:nth-child(2)::before { content: "\f017"; font-size: 11px; }
     .facts-row > div:nth-child(3)::before { content: "\f3c5"; font-size: 12px; }
@@ -747,6 +750,7 @@
       font-weight: 900;
       white-space: nowrap;
     }
+
     .facts-row > div:nth-child(1)::after { content: "EVERY FRIDAY"; }
     .facts-row > div:nth-child(2)::after { content: "10 PM \2013 4 AM"; }
     .facts-row > div:nth-child(3)::after {
@@ -760,7 +764,7 @@
       text-align: left;
     }
 
-    /* ---- "All Together" title ---- */
+    /* ---- "All Together" title ----
     h1.hero-title {
       order: 2;
       position: relative;
