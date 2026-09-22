@@ -699,13 +699,13 @@
     .facts-row {
       order: 1;
       display: grid;
-      grid-template-columns: 1.1fr 1fr 1.1fr;
+      grid-template-columns: 1fr 1fr 1.2fr;
       align-items: center;
       width: 96%;
       max-width: 390px;
-      min-height: 46px;
+      min-height: 58px;
       margin: 0 auto 12px;
-      padding: 2px 6px;
+      padding: 4px 6px;
       border: 1px solid #c6ff19;
       border-radius: 40px;
       background: rgba(5,10,8,0.7);
@@ -715,18 +715,25 @@
 
     .facts-row > div {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 32px;
-      padding: 0 4px;
+      height: 44px;
+      padding: 0 3px;
       border-right: 1px solid #c6ff19;
       box-sizing: border-box;
       min-width: 0;
+      text-align: center;
     }
 
-    .facts-row > div:last-child { border-right: none; }
+    .facts-row > div:last-child {
+      border-right: none;
+    }
+
     .facts-row .fact-label,
-    .facts-row .fact-value { display: none; }
+    .facts-row .fact-value {
+      display: none;
+    }
 
     .facts-row > div:nth-child(1)::before,
     .facts-row > div:nth-child(2)::before,
@@ -735,12 +742,24 @@
       font-weight: 900;
       color: #c6ff19;
       flex-shrink: 0;
-      margin-right: 4px;
+      margin: 0 0 3px;
+      line-height: 1;
     }
 
-    .facts-row > div:nth-child(1)::before { content: "\f073"; font-size: 11px; }
-    .facts-row > div:nth-child(2)::before { content: "\f017"; font-size: 11px; }
-    .facts-row > div:nth-child(3)::before { content: "\f3c5"; font-size: 12px; }
+    .facts-row > div:nth-child(1)::before {
+      content: "\f073";
+      font-size: 14px;
+    }
+
+    .facts-row > div:nth-child(2)::before {
+      content: "\f017";
+      font-size: 14px;
+    }
+
+    .facts-row > div:nth-child(3)::before {
+      content: "\f3c5";
+      font-size: 15px;
+    }
 
     .facts-row > div:nth-child(1)::after,
     .facts-row > div:nth-child(2)::after {
@@ -749,19 +768,26 @@
       font-size: 6.8px;
       font-weight: 900;
       white-space: nowrap;
+      line-height: 1.1;
     }
 
-    .facts-row > div:nth-child(1)::after { content: "EVERY FRIDAY"; }
-    .facts-row > div:nth-child(2)::after { content: "10 PM \2013 4 AM"; }
+    .facts-row > div:nth-child(1)::after {
+      content: "EVERY FRIDAY";
+    }
+
+    .facts-row > div:nth-child(2)::after {
+      content: "10 PM \2013 4 AM";
+    }
+
     .facts-row > div:nth-child(3)::after {
       content: "JUST 3 KM\A FROM CENTRAL VANG VIENG";
       color: #ffffff;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 6.3px;
       font-weight: 900;
-      line-height: 1.25;
+      line-height: 1.15;
       white-space: pre;
-      text-align: left;
+      text-align: center;
     }
 
     /* ---- "All Together" title ---- */
