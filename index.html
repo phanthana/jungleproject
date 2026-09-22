@@ -578,10 +578,10 @@
        fit, and the labels below now wrap instead of overflowing. */
     nav.links {
       display: grid;
-      grid-template-columns: minmax(0,0.95fr) minmax(0,1.4fr) minmax(0,0.9fr) minmax(0,0.85fr) minmax(0,1.15fr);
+      grid-template-columns: minmax(0,1.05fr) minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1.35fr);
       width: 100%;
       max-width: 100%;
-      margin: 4px 0 0;
+      margin: 3px 0 0;
       gap: 0;
     }
 
@@ -591,7 +591,7 @@
       align-items: center;
       justify-content: flex-start;
       min-width: 0;
-      height: 92px;
+      height: 76px;
       padding: 0 2px;
       overflow: visible;
       color: #ffffff;
@@ -604,68 +604,58 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 38px;
-      height: 38px;
+      width: 32px;
+      height: 32px;
       flex: 0 0 auto;
-      margin: 0 auto 5px;
-      border: 1.5px solid #c6ff19;
+      margin: 0 auto 4px;
+      border: 1.2px solid #c6ff19;
       border-radius: 50%;
       color: #c6ff19;
     }
-    nav.links .nav-icon i { font-size: 15px; }
+    nav.links .nav-icon i { font-size: 13px; }
 
+    /* Every label is forced to one non-wrapping line, sized per
+       column so the longest word in that column just fits —
+       this keeps all five icons at exactly two lines (title +
+       subtitle) with their arrows sitting level. */
     nav.links .nav-title {
       width: 100%;
-      font-size: clamp(8.5px, 2.4vw, 10px);
       font-weight: 800;
       line-height: 1.15;
       letter-spacing: -0.1px;
-      white-space: normal;
-      word-break: break-word;
-    }
-
-    /* "Before you come" is the longest label — give it its own
-       slightly smaller, non-wrapping size so it stays on one
-       line like every other icon (title + one subtitle line). */
-    nav.links a:nth-child(2) .nav-title {
-      font-size: clamp(7.5px, 2.1vw, 8.8px);
-      letter-spacing: -0.2px;
       white-space: nowrap;
+      font-size: 9px;
     }
-
     nav.links .nav-sub {
       width: 100%;
       margin-top: 2px;
-      font-size: clamp(6.5px, 1.8vw, 7.5px);
       font-weight: 400;
       color: rgba(255,255,255,0.8);
-      white-space: normal;
-      word-break: break-word;
+      white-space: nowrap;
       line-height: 1.15;
+      font-size: 7px;
     }
 
-    /* "Maps & transport" is the longest subtitle — give it a
-       slightly smaller, non-wrapping size so "Getting there"
-       stays at two lines like every other icon. */
-    nav.links a:nth-child(5) .nav-sub {
-      font-size: clamp(6px, 1.6vw, 7px);
-      letter-spacing: -0.1px;
-      white-space: nowrap;
-    }
+    nav.links a:nth-child(2) .nav-title { font-size: 7.8px; letter-spacing: -0.2px; }
+    nav.links a:nth-child(5) .nav-title { font-size: 8px; }
+    nav.links a:nth-child(5) .nav-sub { font-size: 6.3px; letter-spacing: -0.1px; }
+    nav.links a:nth-child(1) .nav-sub { font-size: 6.6px; }
+    nav.links a:nth-child(3) .nav-sub,
+    nav.links a:nth-child(4) .nav-sub { font-size: 6.6px; }
 
     nav.links .nav-arrow {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 15px;
-      height: 15px;
+      width: 13px;
+      height: 13px;
       flex: 0 0 auto;
-      margin: 4px auto 0;
-      border: 1.5px solid #c6ff19;
+      margin: 3px auto 0;
+      border: 1.2px solid #c6ff19;
       border-radius: 50%;
       color: #c6ff19;
     }
-    nav.links .nav-arrow i { font-size: 6.5px; }
+    nav.links .nav-arrow i { font-size: 5.5px; }
 
     /* ---- Hero ---- */
     .hero {
@@ -681,7 +671,7 @@
     .hero-inner {
       width: 100%;
       min-height: 100svh;
-      padding: 238px 16px 30px;
+      padding: 210px 16px 30px;
       margin: 0;
       display: flex;
       flex-direction: column;
@@ -711,12 +701,12 @@
       display: grid;
       grid-template-columns: 0.85fr 0.95fr 1.55fr;
       align-items: center;
-      width: 96%;
-      max-width: 400px;
-      min-height: 50px;
-      margin: 0 auto 16px;
-      padding: 3px 8px;
-      border: 1.2px solid #c6ff19;
+      width: 94%;
+      max-width: 370px;
+      min-height: 42px;
+      margin: 0 auto 12px;
+      padding: 2px 6px;
+      border: 1px solid #c6ff19;
       border-radius: 40px;
       background: rgba(5,10,8,0.7);
       box-sizing: border-box;
@@ -726,8 +716,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 36px;
-      padding: 0 5px;
+      height: 30px;
+      padding: 0 4px;
       border-right: 1px solid #c6ff19;
       box-sizing: border-box;
       min-width: 0;
@@ -745,15 +735,15 @@
       flex-shrink: 0;
       margin-right: 4px;
     }
-    .facts-row > div:nth-child(1)::before { content: "\f073"; font-size: 13px; }
-    .facts-row > div:nth-child(2)::before { content: "\f017"; font-size: 13px; }
-    .facts-row > div:nth-child(3)::before { content: "\f3c5"; font-size: 14px; }
+    .facts-row > div:nth-child(1)::before { content: "\f073"; font-size: 11px; }
+    .facts-row > div:nth-child(2)::before { content: "\f017"; font-size: 11px; }
+    .facts-row > div:nth-child(3)::before { content: "\f3c5"; font-size: 12px; }
 
     .facts-row > div:nth-child(1)::after,
     .facts-row > div:nth-child(2)::after {
       color: #ffffff;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 7.5px;
+      font-size: 6.8px;
       font-weight: 900;
       white-space: nowrap;
     }
@@ -763,7 +753,7 @@
       content: "JUST 3 KM\A FROM CENTRAL VANG VIENG";
       color: #ffffff;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 7px;
+      font-size: 6.3px;
       font-weight: 900;
       line-height: 1.25;
       white-space: pre;
@@ -921,12 +911,22 @@
      never get tight enough to force wrapping mid-word. */
   @media (max-width: 380px) {
     nav.links .nav-icon {
-      width: 34px;
-      height: 34px;
-      margin-bottom: 4px;
+      width: 28px;
+      height: 28px;
+      margin-bottom: 3px;
     }
-    nav.links .nav-icon i { font-size: 13px; }
-    nav.links > a { height: 86px; padding: 0 2px; }
+    nav.links .nav-icon i { font-size: 11px; }
+    nav.links > a { height: 70px; padding: 0 1px; }
+    nav.links .nav-title { font-size: 8px; }
+    nav.links .nav-sub { font-size: 6.2px; }
+    nav.links a:nth-child(2) .nav-title { font-size: 7px; }
+    nav.links a:nth-child(5) .nav-title { font-size: 7.2px; }
+    nav.links a:nth-child(5) .nav-sub { font-size: 5.8px; }
+    nav.links a:nth-child(1) .nav-sub,
+    nav.links a:nth-child(3) .nav-sub,
+    nav.links a:nth-child(4) .nav-sub { font-size: 6px; }
+    nav.links .nav-arrow { width: 11px; height: 11px; margin-top: 2px; }
+    nav.links .nav-arrow i { font-size: 4.8px; }
   }
 
   @media (max-width: 520px) {
